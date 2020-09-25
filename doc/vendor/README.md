@@ -1,6 +1,6 @@
 # DGUS DWIN scavenged documentation
 
-**Primary resource is [T5L_DGUSII Application Development Guide20200902.pdf](T5L_DGUSII Application Development Guide20200902.pdf)**
+**Primary resource is [T5L_DGUSII Application Development Guide20200902.pdf](./T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)**
 
 Secondary resource should be [T5L translated docs.docx](T5L%20translated%20docs.docx), which is a machine translated version of [this document](http://dudulab.net/DWIN_LAB/download/T5L_DGUSII_DOC_190603.pdf).
 
