@@ -5,13 +5,18 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 ![DGUS II interface](doc/dgus2util.png)
 
-## Images / screen images sources
+## Documentation for development
+### Build firmware archive
+
+To build a firmware archive for distribution, use the `build.cmd` script.
+
+### Images / screen images sources
 
 You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
 
 To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. It will be picked up automatically by the build process of DWIN when saving or generating the project.
 
-## How buttons are handled with code
+### How buttons are handled with code
 
 This picture says it all:
 
@@ -21,11 +26,11 @@ How the code currently works is that there is an `AddrBuf` array that contains t
 
 Virtual Pointer addresses are shared between buttons, so the "Key Data" is used to distinguish between the actual key pressed.
 
-## Touch screen configuration
+### Touch screen configuration
 
 The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)] chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
 
-## Other documentation
+### Other documentation
 
 Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
 
