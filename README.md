@@ -21,6 +21,10 @@ How the code currently works is that there is an `AddrBuf` array that contains t
 
 Virtual Pointer addresses are shared between buttons, so the "Key Data" is used to distinguish between the actual key pressed.
 
+## Touch screen configuration
+
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)] chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
+
 ## Other documentation
 
 Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
