@@ -9,6 +9,8 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
 
+To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. It will be picked up automatically by the build process of DWIN when saving or generating the project.
+
 ## How buttons are handled with code
 
 This picture says it all:
