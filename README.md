@@ -9,6 +9,16 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
 
+## How buttons are handled with code
+
+This picture says it all:
+
+![DWIN button-code correlation](doc/button_type.png)
+
+How the code currently works is that there is an `AddrBuf` array that contains the Virtual Pointer addresses (check chapter 7 in [docs/vendor/T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)). The enum `PROC_COM` contains the indices in that array. 
+
+Virtual Pointer addresses are shared between buttons, so the "Key Data" is used to distinguish between the actual key pressed.
+
 ## Other documentation
 
 Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
