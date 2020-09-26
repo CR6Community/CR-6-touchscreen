@@ -18,7 +18,7 @@ To update the BMP of a screen put the **generated BMP file you made with your im
 
 ### How buttons are handled with code
 
-This picture says it all:
+In the currently - not yet cleaned up - source code of the touch screen handling in Marlin, the events of the touch screen are handled in certain way. This may change when we further refine the code. This picture says it all:
 
 ![DWIN button-code correlation](doc/button_type.png)
 
@@ -28,7 +28,7 @@ Virtual Pointer addresses are shared between buttons, so the "Key Data" is used 
 
 ### Touch screen configuration
 
-The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)] chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
 
 ### Other documentation
 
