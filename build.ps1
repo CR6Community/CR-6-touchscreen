@@ -14,7 +14,7 @@ $ProjectFolder = "src/DWIN"
 $FirmwareFolderName = "DWIN_SET"
 $OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
 $ReadMeFilePath = "src/README.txt"
-$ExampleSuccesfulFilePath = "src/flash_succesful.png"
+$ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
 
 $DWINFolder = Get-ChildItem -Path $ProjectFolder -Filter $FirmwareFolderName
 $ReadMeFile = Get-Item -Path $ReadMeFilePath
