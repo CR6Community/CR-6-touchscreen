@@ -13,11 +13,13 @@ $ProjectFolder = "src/DWIN"
 $FirmwareFolderName = "DWIN_SET"
 $OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
 $ReadMeFilePath = "src/README.txt"
+$ExampleSuccesfulFilePath = "src/flash_succesful.png"
 
 $DWINFolder = Get-ChildItem -Path $ProjectFolder -Filter $FirmwareFolderName
 $ReadMeFile = Get-Item -Path $ReadMeFilePath
+$ExampleSuccesfulFile = Get-Item -Path $ExampleSuccesfulFilePath
 
-@($DWINFolder, $ReadMeFile) | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
+@($DWINFolder, $ExampleSuccesfulFile, $ReadMeFile) | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 Write-Host ""
 Write-Host "Done! Please find the archive in $OutputPath" -ForegroundColor Green
 Read-Host | Out-Null
