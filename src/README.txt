@@ -17,3 +17,5 @@ that the DWIN_SET folder itself is present on the SD card.
 
 Then, follow this YouTube video to complete the flashing process:
 https://www.youtube.com/watch?v=Jswzrh2_ekk
+
+The flash process is completed when you see "END!" like shown in flash_succesful.png.
