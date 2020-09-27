@@ -9,6 +9,9 @@ If you like to use the command prompt, you can use this:
 	
 	Where X: is the drive where the SD card is mounted.
 	
+If you can't find the option for 4KB sector size your SD card is too large. 
+You can either use a smaller SD card or can shrink the partition in Disk Manager.
+	
 Take the firmware archive and extract the DWIN_SET folder to the SD card, so
 that the DWIN_SET folder itself is present on the SD card.
 
