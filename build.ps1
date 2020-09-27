@@ -44,7 +44,7 @@ Write-Host "Zipping..." -ForegroundColor Cyan
 $DWINFolder = Get-Item -Path "$BuildTmpDir/$FirmwareFolderName"
 $ZipContents += $DWINFolder
 
-$ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal
+$ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 
 # Done
 Write-Host ""
