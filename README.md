@@ -14,7 +14,16 @@ To build a firmware archive for distribution, use the `build.cmd` script.
 
 You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
 
-To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. It will be picked up automatically by the build process of DWIN when saving or generating the project.
+To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. 
+
+#### Updating the touch screen firmware
+It will be picked up automatically by the build process of DWIN when saving or generating the project.
+
+Next, re-generate the `32_Screen.icl` ICL file are follows:
+
+![Update ICL file](doc/update-screen-icl.gif)
+
+As you can note, you update it in both DWIN_SET and ICONS. The first is what goes to the touch screen, the latter is what the IDE uses (apparently).
 
 ### How buttons are handled with code
 
