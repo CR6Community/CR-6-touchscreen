@@ -31,13 +31,13 @@ In the currently - not yet cleaned up - source code of the touch screen handling
 
 ![DWIN button-code correlation](doc/button_type.png)
 
-How the code currently works is that there is an `AddrBuf` array that contains the Virtual Pointer addresses (check chapter 7 in [docs/vendor/T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)). The enum `PROC_COM` contains the indices in that array. 
+How the code currently works is that there is an `AddrBuf` array that contains the Virtual Pointer addresses (check chapter 7 in [doc/vendor/T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf)). The enum `PROC_COM` contains the indices in that array. 
 
 Virtual Pointer addresses are shared between buttons, so the "Key Data" is used to distinguish between the actual key pressed.
 
 ### Touch screen configuration
 
-The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./docs/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
 
 ### Other documentation
 
