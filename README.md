@@ -39,6 +39,15 @@ Virtual Pointer addresses are shared between buttons, so the "Key Data" is used 
 
 The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
 
+### Fonts
+
+Font's are currently configured like below:
+
+![Font Settings](doc/font-settings.png)
+
+In the same folder where you have the DWIN tool unpacked a `0_DWIN_ASC.HZK` file is placed. You need to copy that to the DWIN_SET folder, and can flash it directly.
+The kerning of the current font is not ideal (especially using numbers that are small, like "1"), so perhaps we should look for a replacement.
+
 ### Other documentation
 
 Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
