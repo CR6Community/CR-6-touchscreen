@@ -9,6 +9,10 @@ If you like to use the command prompt, you can use this:
 	
 	Where X: is the drive where the SD card is mounted.
 	
+Mac users may need to use this command line:
+
+    sudo newfs_msdos -F 32 -c 8 -v micro /dev/diskXXX
+	
 If you can't find the option for 4KB sector size your SD card is too large. 
 You can either use a smaller SD card or can shrink the partition in Disk Manager.
 	
@@ -19,4 +23,7 @@ Then, follow this YouTube video to complete the flashing process:
 https://www.youtube.com/watch?v=Jswzrh2_ekk
 
 The flash process is completed when you see "END!" like shown in flash_succesful.jpg.
+Note that there are several lines showing updated files
+
 If you get an orange screen, flashing did most likely _not_ succeed.
+If you get a blue screen with END!, but the numbers of the updated files showing "0", flashing did not succeed either.
