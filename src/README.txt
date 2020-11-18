@@ -1,6 +1,8 @@
 # Instructions for flashing the firmware
 
-As always, this is all on your own risk.
+As always, this is all on your own risk. The CR-6 Community firmware developers take no responsibility on flashing this firmware.
+
+
 
 ~~~~~ Windows Users ~~~~~
 
@@ -40,3 +42,11 @@ Note that there are several lines showing updated files
 
 If you get an orange screen, flashing did most likely _not_ succeed.
 If you get a blue screen with END!, but the numbers of the updated files showing "0", flashing did not succeed either.
+
+
+~~~~~~~~~ Examples ~~~~~~~~~~~
+
+**flash_succesful.jpg** shows the indicators that flashing has been successful
+
+**flash_failed.jpg** shows the indicators that flashing has been unsuccesful
+

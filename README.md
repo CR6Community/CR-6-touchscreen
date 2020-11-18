@@ -10,6 +10,8 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 To build a firmware archive for distribution, use the `build.cmd` script.
 
+You need to have Powershell Core installed (pwsh).
+
 ### Images / screen images sources
 
 You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
