@@ -2,7 +2,9 @@
 
 As always, this is all on your own risk. The CR-6 Community firmware developers take no responsibility on flashing this firmware.
 
+The touch screen is very picky when it comes to SD cards, partitioning and partition sizes. If you did follow the instructions below and still you could not flash the files properly, try a different SD card and double check you followed the instructions.
 
+This may seem like a chore, and it is, but you're going to need to bite the bullet some time - Creality also issues updates to the touch screen and this has the same issues - although less instructions ;-)
 
 ~~~~~ Windows Users ~~~~~
 
@@ -43,7 +45,12 @@ Note that there are several lines showing updated files
 If you get an orange screen, flashing did most likely _not_ succeed.
 If you get a blue screen with END!, but the numbers of the updated files showing "0", flashing did not succeed either.
 
+**NOTE** 
+We have observed with one user that even touch the file counts were correct, the firmware still was not flashed correctly.
 
+If you have issues with the firmware flashing but still elements missing on the touch screen, please try a different SD card, a smaller SD card and partition etc. The touch screen is very picky when it comes to flashing, and there is not much we can change about that :-(
+
+I
 ~~~~~~~~~ Examples ~~~~~~~~~~~
 
 **flash_succesful.jpg** shows the indicators that flashing has been successful
