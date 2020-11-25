@@ -15,17 +15,20 @@ $FirmwareFolderName = "DWIN_SET"
 $OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
 
 # ... ZIP inputs
-$ReadMeFilePath = "src/README.txt"
+$ReadMeFilePath = "src/README.md"
+$ReadMeCopiedFilePath = "$BuildTmpDir/README.txt"
 $ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
 $ExampleFailedFilePath = "src/flash_failed.jpg"
 
-[array] $ZipInputs = $($ReadMeFilePath, $ExampleSuccesfulFilePath, $ExampleFailedFilePath)
+[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleFailedFilePath)
 
 # Clean up
 Write-Host "Cleaning up..." -ForegroundColor Cyan
 Remove-Item $BuildDir -Recurse -Force -ErrorAction SilentlyContinue
 New-Item $BuildDir -ItemType Directory | Out-Null
 New-Item $BuildTmpDir -ItemType Directory | Out-Null
+
+Copy-Item $ReadMeFilePath $ReadMeCopiedFilePath -Force -Verbose
 
 # Copy DWIN stuff
 Write-Host "Preparing..." -ForegroundColor Cyan
