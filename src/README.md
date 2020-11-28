@@ -58,6 +58,8 @@ Note that there are several lines showing updated files
 If you get an orange screen, flashing did most likely _not_ succeed.
 If you get a blue screen with END!, but the numbers of the updated files showing "0", flashing did not succeed either.
 
+After flashing the touch screen, you can turn the printer off, and remove the SD card.
+
 **NOTE** 
 We have observed with one user that even though the file counts were correct, the firmware still was not flashed correctly.
 
