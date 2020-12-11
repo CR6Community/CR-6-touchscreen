@@ -1,2 +1,3 @@
 *.lnk
-build/
+/build/
+/src/DWIN/DWIN_SET/*.bmp
