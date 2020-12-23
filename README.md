@@ -109,3 +109,7 @@ The kerning of the current font is not ideal (especially using numbers that are 
 Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
 
 In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusResources/tree/creality-ender-5-plus/projects).
+
+## Credits
+
+[The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits)
