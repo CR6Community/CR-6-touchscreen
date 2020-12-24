@@ -113,3 +113,7 @@ In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusReso
 ## Credits
 
 [The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits)
+
+Icons from [Font Awesome](https://fontawesome.com/) and [Remix Icon](https://remixicon.com/).
+
+Font from [Google Fonts](https://fonts.google.com/specimen/B612) and customized with [FontForge](https://fontforge.org/).
