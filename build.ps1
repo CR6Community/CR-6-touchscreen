@@ -57,6 +57,7 @@ $ZipContents += $DWINFolder
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 
 if ($CopyToDrive) {
+	Remove-Item -Path $(Join-Path $CopyToDrive "DWIN_SET") -Recurse -Force -Verbose
 	Expand-Archive -Path $OutputPath -DestinationPath $CopyToDrive -Verbose -Force
 }
 
