@@ -52,13 +52,18 @@ that the DWIN_SET folder itself is present on the SD card.
 Then, follow this YouTube video to complete the flashing process:
 https://www.youtube.com/watch?v=Jswzrh2_ekk
 
+
+
 The flash process is completed when you see "END!" like shown in flash_succesful.jpg.
 Note that there are several lines showing updated files
 
 If you get an orange screen, flashing did most likely _not_ succeed.
-If you get a blue screen with END!, but the numbers of the updated files showing "0", flashing did not succeed either.
 
-After flashing the touch screen, you can turn the printer off, and remove the SD card.
+If you get a blue screen with END!, but the numbers of the updated files only showing "0", flashing did not succeed either. Check the examples further down in this document for more information.
+
+When flashing has been succesful, repeat the procedure and additional two to three times. The DWIN touch screen doesn't always take "all" files during flashing, so repeating it a few times (by turning the printer off and then on again) should help with that.
+
+After flashing the touch screen has succeeded, you can turn the printer off, and remove the SD card.
 
 **NOTE** 
 We have observed with one user that even though the file counts were correct, the firmware still was not flashed correctly.
@@ -67,10 +72,15 @@ If you have issues with the firmware flashing but still elements missing on the 
 
 ## Examples
 
+**flashing_in_progress.jpg** shows the indicators that flashing is in progress
+
+![Flashing of touch screen successful](flash_in_progress.jpg)
+
+
 **flash_succesful.jpg** shows the indicators that flashing has been successful
 
-![Flash of touch screen successful](flash_succesful.jpg)
+![Flashing of touch screen successful](flash_succesful.jpg)
 
 **flash_failed.jpg** shows the indicators that flashing has been unsuccesful
 
-![Flash of touch screen failed](flash_failed.jpg)
+![Flashing of touch screen failed](flash_failed.jpg)
