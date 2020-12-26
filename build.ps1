@@ -1,9 +1,14 @@
+Param([Switch]$Force, [string]$CopyToDrive)
+
 Write-Host "DGUS DWIN firmware build package script v1.0" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "WARNING: " -ForegroundColor YellowWrite-Host "1 . Ensure you've clicked 'Generate' in the DWIN editor first" -ForegroundColor Yellow
 Write-Host "2 . If any screens are updated, make sure you've re-generated the ICL file (see README.md)" -ForegroundColor Yellow
-Write-Host "Press any key to confirm!" -ForegroundColor Yellow
-Read-Host | Out-Null
+
+if (!$Force) {
+    Write-Host "Press any key to confirm!" -ForegroundColor Yellow
+    Read-Host | Out-Null
+}
 
 # Variables 
 $BuildDir = "build"
@@ -51,8 +56,15 @@ $ZipContents += $DWINFolder
 
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 
+if ($CopyToDrive) {
+	Expand-Archive -Path $OutputPath -DestinationPath $CopyToDrive -Verbose -Force
+}
+
+
 # Done
 Write-Host ""
 Write-Host "Done! Please find the archive in $OutputPath" -ForegroundColor Green
 
-Read-Host | Out-Null
+if (!$Force) {
+    Read-Host | Out-Null
+}
