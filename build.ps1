@@ -48,10 +48,10 @@ Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewNa
 Write-Host "Checking sector allocation..." -ForegroundColor Cyan
 
 Write-Host "---------------------------------------------------"
-$ExitCode = .\scripts\Get-DwinSectorAllocation.ps1 $BuildTmpDir
+.\scripts\Get-DwinSectorAllocation.ps1 $BuildTmpDir
 Write-Host "---------------------------------------------------"
 
-if ($ExitCode -ne 0) {
+if ($LASTEXITCODE -ne 0) {
     Write-Host "... sector allocation check failed" -ForegroundColor Red
     Exit -1
 }
