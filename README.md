@@ -41,7 +41,15 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 ### Build firmware archive
 
-To build a firmware archive for distribution, use the `build.cmd` script.
+To build a firmware archive for distribution, use the `build.cmd` script. It will do a sanity check and then zip the files to the `build` folder.
+
+For development you can run the build script as follows: 
+
+```pwsh
+.\build -Deploy Q:
+```
+
+Where Q: is the path of your flash drive with the SD card.
 
 You need to have Powershell Core installed (pwsh).
 
@@ -75,6 +83,10 @@ Essentially what it boils down to:
 - There is no protection against sector overwriting: if you have files overlap sectors, DWIN will happily flash the next file over the previous file
 
 So with the above in mind one must take care to make sure files do not overlap. When you flash everything to the touch screen you must ensure you've deleted the old (renumbered) ICL files from your SD card, otherwise weird things will happen. Background may go missing, etc.
+
+During build a script will run to make sure no sectors have been overallocated. You can also run this script manually.
+
+![DWIN sector allocation check script](doc/sector-allocation-check.png)
 
 ### How buttons are handled with code
 
