@@ -1,14 +1,10 @@
-Param([Switch]$Force, [string]$CopyToDrive)
+Param([string]$Deploy)
 
 Write-Host "DGUS DWIN firmware build package script v1.0" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "WARNING: " -ForegroundColor YellowWrite-Host "1 . Ensure you've clicked 'Generate' in the DWIN editor first" -ForegroundColor Yellow
+Write-Host "WARNING: " -ForegroundColor Yellow
+Write-Host "1 . Ensure you've clicked 'Generate' in the DWIN editor first" -ForegroundColor Yellow
 Write-Host "2 . If any screens are updated, make sure you've re-generated the ICL file (see README.md)" -ForegroundColor Yellow
-
-if (!$Force) {
-    Write-Host "Press any key to confirm!" -ForegroundColor Yellow
-    Read-Host | Out-Null
-}
 
 # Variables 
 $BuildDir = "build"
@@ -48,6 +44,20 @@ Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "*.bmp" | Remove-Item -Force
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "13*.bin" | Rename-Item -NewName "13TouchFile.bin"
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewName "14ShowFile.bin"
 
+# Check sector allocation
+Write-Host "Checking sector allocation..." -ForegroundColor Cyan
+
+Write-Host "---------------------------------------------------"
+$ExitCode = .\scripts\Get-DwinSectorAllocation.ps1 $BuildTmpDir
+Write-Host "---------------------------------------------------"
+
+if ($ExitCode -ne 0) {
+    Write-Host "... sector allocation check failed" -ForegroundColor Red
+    Exit -1
+}
+
+Write-Host "... sector allocation check succesful" -ForegroundColor Green
+
 # Make ZIP file
 Write-Host "Zipping..." -ForegroundColor Cyan
 [array] $ZipContents = $ZipInputs | Get-Item
@@ -56,16 +66,13 @@ $ZipContents += $DWINFolder
 
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 
-if ($CopyToDrive) {
-	Remove-Item -Path $(Join-Path $CopyToDrive "DWIN_SET") -Recurse -Force -Verbose
-	Expand-Archive -Path $OutputPath -DestinationPath $CopyToDrive -Verbose -Force
+if ($Deploy) {
+	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose
+	Expand-Archive -Path $OutputPath -DestinationPath $Deploy -Verbose -Force
 }
-
 
 # Done
 Write-Host ""
 Write-Host "Done! Please find the archive in $OutputPath" -ForegroundColor Green
 
-if (!$Force) {
-    Read-Host | Out-Null
-}
+Exit 0
