@@ -60,6 +60,22 @@ Next, re-generate the `32_Screen.icl` ICL file are follows:
 
 As you can note, you update it in both DWIN_SET and ICONS. The first is what goes to the touch screen, the latter is what the IDE uses (apparently).
 
+### Flash space
+
+DWIN uses a specific set-up of the flash space as described in the manual - as shown below.
+
+![DWIN flash space](doc/flash-space.png)
+
+Essentially what it boils down to:
+
+- The flash space is divided into 256KB sectors
+- The number prefix on the ICL/HZK/BIN file name is the sector number where the file is flashed
+- A sector can only contain a single file
+- A file can span over multiple sectors, and if a file needs 1½ sectors for instance, it will allocate 2 sectors.
+- There is no protection against sector overwriting: if you have files overlap sectors, DWIN will happily flash the next file over the previous file
+
+So with the above in mind one must take care to make sure files do not overlap. When you flash everything to the touch screen you must ensure you've deleted the old (renumbered) ICL files from your SD card, otherwise weird things will happen. Background may go missing, etc.
+
 ### How buttons are handled with code
 
 In the currently - cleaned up - source code of the touch screen handling in Marlin, the events of the touch screen are handled as described below. This may change in the future. This picture says it all:
@@ -93,7 +109,7 @@ If you like to see how the touch screen code is handled in the Creality firmware
 
 ### Touch screen configuration
 
-The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!).
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!). The DWIN editor also has a way to edit this file. Many parameters can also be set at runtime.
 
 ### Fonts
 
