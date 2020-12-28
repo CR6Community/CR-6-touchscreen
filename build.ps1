@@ -56,7 +56,7 @@ if ($LASTEXITCODE -ne 0) {
     Exit -1
 }
 
-Write-Host "... sector allocation check succesful" -ForegroundColor Green
+Write-Host "... sector allocation check successful" -ForegroundColor Green
 
 # Make ZIP file
 Write-Host "Zipping..." -ForegroundColor Cyan
