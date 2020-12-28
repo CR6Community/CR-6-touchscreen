@@ -21,8 +21,9 @@ $ReadMeCopiedFilePath = "$BuildTmpDir/README.txt"
 $ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
 $ExampleProgressFilePath = "src/flashing_in_progress.jpg"
 $ExampleFailedFilePath = "src/flash_failed.jpg"
+$ExampleExplorerScreenshotFilePath = "src/dwin-folder-on-sd-card.png"
 
-[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleProgressFilePath, $ExampleFailedFilePath)
+[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleProgressFilePath, $ExampleExplorerScreenshotFilePath, $ExampleFailedFilePath)
 
 # Clean up
 Write-Host "Cleaning up..." -ForegroundColor Cyan

@@ -46,8 +46,7 @@ It'll list all drives attached to your computer. Look for an entry that matches 
 	
 ## Once you have your SDCard properly formatted
 	
-Take the firmware archive and extract the DWIN_SET folder to the SD card, so
-that the DWIN_SET folder itself is present on the SD card.
+Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card. Note: Ensure this folder is empty/deleted before you copy the new firmware packages because some files may have been renamed!
 
 Then, follow this YouTube video to complete the flashing process:
 https://www.youtube.com/watch?v=Jswzrh2_ekk
@@ -72,10 +71,13 @@ If you have issues with the firmware flashing but still elements missing on the 
 
 ## Examples
 
+**dwin-folder-on-sd-card.png** shows how you place the files on your SD card
+
+![Files on your SD card](dwin-folder-on-sd-card.png)
+
 **flashing_in_progress.jpg** shows the indicators that flashing is in progress
 
 ![Flashing of touch screen successful](flash_in_progress.jpg)
-
 
 **flash_succesful.jpg** shows the indicators that flashing has been successful
 
