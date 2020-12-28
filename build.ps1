@@ -41,8 +41,8 @@ Copy-Item -Path "$ProjectFolder/$FirmwareFolderName" -Recurse -Destination $Buil
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "*.bmp" | Remove-Item -Force
 
 # ... DWIN seems sensitive to these names?
-Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "13*.bin" | Rename-Item -NewName "13_TouchFile.bin"
-Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewName "14_VariableFile.bin"
+Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "13*.bin" | Rename-Item -NewName "13_Touch.bin"
+Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewName "14_Variables.bin"
 
 # Check sector allocation
 Write-Host "Checking sector allocation..." -ForegroundColor Cyan
