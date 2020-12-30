@@ -41,6 +41,9 @@ Copy-Item -Path "$ProjectFolder/$FirmwareFolderName" -Recurse -Destination $Buil
 # ... Bitmaps are now actually used
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "*.bmp" | Remove-Item -Force
 
+# ... Child folders not relevant
+Get-ChildItem -Path "$BuildTmpDir/$FirmwareFolderName" -Directory | Remove-Item -Force -Recurse
+
 # ... DWIN seems sensitive to these names?
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "13*.bin" | Rename-Item -NewName "13_Touch.bin"
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewName "14_Variables.bin"
