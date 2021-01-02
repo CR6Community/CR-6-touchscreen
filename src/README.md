@@ -77,7 +77,7 @@ If you have issues with the firmware flashing but still elements missing on the 
 
 **flashing_in_progress.jpg** shows the indicators that flashing is in progress
 
-![Flashing of touch screen successful](flash_in_progress.jpg)
+![Flashing of touch screen successful](flashing_in_progress.jpg)
 
 **flash_succesful.jpg** shows the indicators that flashing has been successful
 
