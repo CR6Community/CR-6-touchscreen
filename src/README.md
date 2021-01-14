@@ -26,7 +26,7 @@ You can either use a smaller SD card or can shrink the partition in Disk Manager
 
 ## Linux Users
 
-You'Il know what to do. 
+The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". Partition table type GPT might not be working, choose type dos.
 
 ## Mac Users
 
