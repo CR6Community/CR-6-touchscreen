@@ -27,6 +27,28 @@ You can either use a smaller SD card or can shrink the partition in Disk Manager
 ## Linux Users
 
 The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". Partition table type GPT might not be working, choose type dos.
+Commands:
+	fdisk /dev/sdX where sdX is your SD card's device
+In fdisk:
+	o (new dos partition table)
+	n (new partition)
+	p (primary)
+	1 (partition nr)
+	8192 (starting sector)
+	enter (last sector) ---> if your SD card is bigger than 8Gb, enter a lower sector number here so that the partition <8Gb
+	t (change type)
+	b (hex code of W95 FAT32)
+	w (write all changes to sd-card)
+
+On the command line:
+	mkfs.fat -F 32 -s 8 /dev/sdX1
+	fsck.fat -v /dev/sdX1
+	mount /dev/sdX1 /mnt
+
+For mainboard firmware:
+	cp /path/to/mainboard_firmware.bin /mnt
+For touchscreen firmware:
+	cp -r /path/to/touchscreen-firmware/DWIN_SET /mnt
 
 ## Mac Users
 
