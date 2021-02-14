@@ -116,3 +116,7 @@ If you have issues with the firmware flashing but still elements missing on the 
 **flash_failed.jpg** shows the indicators that flashing has been unsuccesful
 
 ![Flashing of touch screen failed](flash_failed.jpg)
+
+**flash_failed2.jpg** shows that the firmware does not recognize the version of the TFT
+
+![Flashing of touch screen failed](flash_failed2.jpg)
