@@ -113,6 +113,10 @@ If you have issues with the firmware flashing but still elements missing on the 
 
 ![Flashing of touch screen successful](flash_succesful.jpg)
 
+**flash_succesful2.jpg** shows that after flashing the version number of the firmware is shown. If you (for instance) downloaded Community Firmware Release 7 then "CR6Comm-Rel7 Ready" would show.
+
+![Flashing of touch screen successful](flash_succesful2.jpg)
+
 **flash_failed.jpg** shows the indicators that flashing has been unsuccesful
 
 ![Flashing of touch screen failed](flash_failed.jpg)

@@ -19,12 +19,13 @@ $OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
 $ReadMeFilePath = "src/README.md"
 $ReadMeCopiedFilePath = "$BuildTmpDir/README.txt"
 $ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
+$ExampleSuccesful2FilePath = "src/flash_succesful2.jpg"
 $ExampleProgressFilePath = "src/flashing_in_progress.jpg"
 $ExampleFailedFilePath = "src/flash_failed.jpg"
 $ExampleFailed2FilePath = "src/flash_failed2.jpg"
 $ExampleExplorerScreenshotFilePath = "src/dwin-folder-on-sd-card.png"
 
-[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleProgressFilePath, $ExampleExplorerScreenshotFilePath, $ExampleFailedFilePath, $ExampleFailed2FilePath)
+[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleSuccesful2FilePath, $ExampleProgressFilePath, $ExampleExplorerScreenshotFilePath, $ExampleFailedFilePath, $ExampleFailed2FilePath)
 
 # Clean up
 Write-Host "Cleaning up..." -ForegroundColor Cyan
