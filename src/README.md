@@ -8,11 +8,13 @@ This may seem like a chore, and it is, but you're going to need to bite the bull
 
 ## Prequisites
 
-1. The community firmware package downloaded from the 'releases tab'. Don't use the files from the Github source download directly - that won't work. Use the files delivered as assets as part of the release. If this file is called 'README.txt' - you have the correct package.
+1. The CR-6 Community Firmware package downloaded from the 'releases tab'. Don't use the files from the Github source download directly - that won't work. Use the files delivered as assets as part of the release. The ZIP file of the touch screen is included within the release. If this file is called 'README.txt' - you have the correct package.
 
-2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) do not work.
+2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) do not work. 
 
-## Windows Users
+## SD card formatting instructions
+
+### Windows Users
 
 Format an micro-SD card as FAT32 with 4096 sector size.
 If you like to use the command prompt, you can use this: 
@@ -24,7 +26,7 @@ If you like to use the command prompt, you can use this:
 If you can't find the option for 4096 sector size your SD card is too large.
 You can either use a smaller SD card or can shrink the partition in Disk Manager.
 
-## Linux Users
+### Linux Users
 
 The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". Partition table type GPT might not be working, choose type dos.
 
@@ -58,7 +60,7 @@ For touchscreen firmware:
 
 	cp -r /path/to/touchscreen-firmware/DWIN_SET /mnt
 
-## Mac Users
+### Mac Users
 
 First, unmount the SDCard.
 
@@ -74,25 +76,32 @@ To figure out what your SDCard path is, you can use the following command:
 
 It'll list all drives attached to your computer. Look for an entry that matches your SDCard size.
 	
-## Once you have your SDCard properly formatted
+## Steps when you have formatted your SD card
 	
 Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card. Note: Ensure this folder is empty/deleted before you copy the new firmware packages because some files may have been renamed!
 
 Then, follow this YouTube video to complete the flashing process:
 https://www.youtube.com/watch?v=Jswzrh2_ekk
 
+### What does a successful flash look like
 
+The flash process is completed when you see "END!" like shown in flash_succesful.jpg. Note that there are several lines showing updated files.
 
-The flash process is completed when you see "END!" like shown in flash_succesful.jpg.
-Note that there are several lines showing updated files
-
-If you get an orange screen, flashing did most likely _not_ succeed.
-
-If you get a blue screen with END!, but the numbers of the updated files only showing "0", flashing did not succeed either. Check the examples further down in this document for more information.
-
-When flashing has been succesful, repeat the procedure and additional two to three times. The DWIN touch screen doesn't always take "all" files during flashing, so repeating it a few times (by turning the printer off and then on again) should help with that.
+_When flashing has been succesful, repeat the procedure and additional two to three times. The DWIN touch screen doesn't always take "all" files during flashing, so repeating it a few times (by turning the printer off and then on again) should help with that._
 
 After flashing the touch screen has succeeded, you can turn the printer off, and remove the SD card.
+
+If the motherboard is also flashed correctly, after restarting the printer the version will be shown (like in flash_succesful2.jpg). Make sure the version matches with the release of the firmware you downloaded.
+
+### What does an unsuccessful flash look like
+
+- If you get an orange screen, flashing did **not** succeed.
+
+- If you get a blue screen with END!, but the numbers of the updated files only showing "0", flashing did **not** succeed either. Check the examples further down in this document for more information.
+
+- If, after rebooting the printer, a message is shown about "TFT version mismatch" (like in flash_failed2.jpg) then flashing is not successful.
+
+- if, after rebooting the printer, a message is shown about "Firmware flashed incorrectly" then your screen firmware might be flashed but your motherboard ignored the firmware update. This sometimes happens on Creality v4.5.2 boards - reformat your SD card and rename the ".bin" file to something like "today.bin" and retry.
 
 **NOTE** 
 We have observed with one user that even though the file counts were correct, the firmware still was not flashed correctly.
@@ -121,6 +130,6 @@ If you have issues with the firmware flashing but still elements missing on the 
 
 ![Flashing of touch screen failed](flash_failed.jpg)
 
-**flash_failed2.jpg** shows that the firmware does not recognize the version of the TFT
+**flash_failed2.jpg** shows that the firmware does not recognize the version of the TFT. The LED near the hotend will also keep flashing on and off.
 
 ![Flashing of touch screen failed](flash_failed2.jpg)
