@@ -133,3 +133,13 @@ If you have issues with the firmware flashing but still elements missing on the 
 **flash_failed2.jpg** shows that the firmware does not recognize the version of the TFT. The LED near the hotend will also keep flashing on and off.
 
 ![Flashing of touch screen failed](flash_failed2.jpg)
+
+## Troubleshooting
+
+Follow the instruction in "What does an unsuccessful flash look like". 
+
+### My touch screen is garbled, pages are shown partially or the screen stops responding
+
+If the screen stops responding or is not displaying properly, try reflashing the firmware using a __different__ SD card.
+
+Check this issue for more information: https://github.com/CR6Community/Marlin/issues/188
