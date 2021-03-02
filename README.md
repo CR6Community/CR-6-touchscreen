@@ -59,14 +59,23 @@ You can find the source files where the screen bitmaps are generated from in the
 
 To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. 
 
-#### Updating the touch screen firmware
-It will be picked up automatically by the build process of DWIN when saving or generating the project.
+#### Updating the touch screen firmware files
 
-Next, re-generate the `32_Screen.icl` ICL file are follows:
+It will be picked up automatically by the build process of DWIN when saving or generating the project. However, the ICL file is what actually gets flashed. This is essentially a dictionary of concatenated compressed JFIF files.
+
+Next, re-generate the `23_Screen.icl` ICL file are follows:
 
 ![Update ICL file](doc/update-screen-icl.gif)
 
-As you can note, you update it in both DWIN_SET and ICONS. The first is what goes to the touch screen, the latter is what the IDE uses (apparently).
+Things worthy of note:
+
+- Quality is set to 100%, followed by pressing the "Set all" button to apply it to each import file.
+- The `DWIN_SOURCE` is used as a source for generating the ICL.
+- The ICL is saved twice: once in the `DWIN_SOURCE` folder, once in the `DWIN_SET` folder.
+
+As you can note, you update it in both `DWIN_SET` and `DWIN_SOURCE`. The first is what goes to the touch screen, the latter is what the DWIN editor uses (apparently).
+
+For icon ICL generation the process is the same, except that you pick the icons from a subdirectory of `DWIN_SOURCE`.
 
 ### Flash space
 
