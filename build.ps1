@@ -73,8 +73,8 @@ $ZipContents += $DWINFolder
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 
 if ($Deploy) {
-	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose
-	Expand-Archive -Path $OutputPath -DestinationPath $Deploy -Verbose -Force
+	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose -ErrorAction SilentlyContinue
+	Copy-Item "$BuildTmpDir/$FirmwareFolderName" -Destination $Deploy -Verbose -Force -Recurse
 }
 
 # Done
