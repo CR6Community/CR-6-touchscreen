@@ -80,8 +80,14 @@ It'll list all drives attached to your computer. Look for an entry that matches 
 	
 Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card. Note: Ensure this folder is empty/deleted before you copy the new firmware packages because some files may have been renamed!
 
-Then, follow this YouTube video to complete the flashing process:
+Then, follow one of these YouTube videos to complete the flashing process:
+
 https://www.youtube.com/watch?v=Jswzrh2_ekk
+https://www.youtube.com/watch?v=2-Mnin3_1jw
+https://www.youtube.com/watch?v=9jk3lirEfg0
+https://www.youtube.com/watch?v=9jk3lirEfg0
+
+**Be careful that you don't short out the touch screen when flashing it. Ensure the power is not interrupted while flashing.**
 
 ### What does a successful flash look like
 
