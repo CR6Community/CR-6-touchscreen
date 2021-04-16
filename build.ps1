@@ -1,4 +1,4 @@
-Param([string]$Deploy)
+Param([string]$Deploy, [Switch]$nozip)
 
 Write-Host "DGUS DWIN firmware build package script v1.0" -ForegroundColor Cyan
 Write-Host ""
@@ -64,13 +64,14 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "... sector allocation check successful" -ForegroundColor Green
 
+if (! $nozip) {
 # Make ZIP file
 Write-Host "Zipping..." -ForegroundColor Cyan
 [array] $ZipContents = $ZipInputs | Get-Item
 $DWINFolder = Get-Item -Path "$BuildTmpDir/$FirmwareFolderName"
 $ZipContents += $DWINFolder
-
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
+}
 
 if ($Deploy) {
 	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose -ErrorAction SilentlyContinue
