@@ -1,4 +1,4 @@
-Param([string]$Deploy)
+Param([string]$Deploy, [bool]$nozip)
 
 Write-Host "DGUS DWIN firmware build package script v1.0" -ForegroundColor Cyan
 Write-Host ""
@@ -13,29 +13,27 @@ $BuildTmpDir = "build\tmp"
 $ProjectFolder = "src/DWIN"
 $FirmwareFolderName = "DWIN_SET"
 
-#$OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
-$OutputPath = $BuildTmpDir
+$OutputPath = "$BuildDir/CR-6-touchscreen-$(Get-Date -Format "yyyy-MM-dd").zip"
 
 # ... ZIP inputs
-# $ReadMeFilePath = "src/README.md"
-# $ReadMeCopiedFilePath = "$BuildTmpDir/README.txt"
-# $ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
-# $ExampleSuccesful2FilePath = "src/flash_succesful2.jpg"
-# $ExampleProgressFilePath = "src/flashing_in_progress.jpg"
-# $ExampleFailedFilePath = "src/flash_failed.jpg"
-# $ExampleFailed2FilePath = "src/flash_failed2.jpg"
-# $ExampleExplorerScreenshotFilePath = "src/dwin-folder-on-sd-card.png"
+$ReadMeFilePath = "src/README.md"
+$ReadMeCopiedFilePath = "$BuildTmpDir/README.txt"
+$ExampleSuccesfulFilePath = "src/flash_succesful.jpg"
+$ExampleSuccesful2FilePath = "src/flash_succesful2.jpg"
+$ExampleProgressFilePath = "src/flashing_in_progress.jpg"
+$ExampleFailedFilePath = "src/flash_failed.jpg"
+$ExampleFailed2FilePath = "src/flash_failed2.jpg"
+$ExampleExplorerScreenshotFilePath = "src/dwin-folder-on-sd-card.png"
 
-# [array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleSuccesful2FilePath, $ExampleProgressFilePath, $ExampleExplorerScreenshotFilePath, $ExampleFailedFilePath, $ExampleFailed2FilePath)
+[array] $ZipInputs = $($ReadMeCopiedFilePath, $ExampleSuccesfulFilePath, $ExampleSuccesful2FilePath, $ExampleProgressFilePath, $ExampleExplorerScreenshotFilePath, $ExampleFailedFilePath, $ExampleFailed2FilePath)
 
 # Clean up
 Write-Host "Cleaning up..." -ForegroundColor Cyan
-# Remove-Item $BuildDir -Recurse -Force -ErrorAction SilentlyContinue
-# New-Item $BuildDir -ItemType Directory | Out-Null
-Remove-Item $BuildTmpDir -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item $BuildDir -Recurse -Force -ErrorAction SilentlyContinue
+New-Item $BuildDir -ItemType Directory | Out-Null
 New-Item $BuildTmpDir -ItemType Directory | Out-Null
 
-# Copy-Item $ReadMeFilePath $ReadMeCopiedFilePath -Force -Verbose
+Copy-Item $ReadMeFilePath $ReadMeCopiedFilePath -Force -Verbose
 
 # Copy DWIN stuff
 Write-Host "Preparing..." -ForegroundColor Cyan
@@ -66,18 +64,19 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "... sector allocation check successful" -ForegroundColor Green
 
-# Make ZIP file
-# Write-Host "Zipping..." -ForegroundColor Cyan
-# [array] $ZipContents = $ZipInputs | Get-Item
-# $DWINFolder = Get-Item -Path "$BuildTmpDir/$FirmwareFolderName"
-# $ZipContents += $DWINFolder
+if (! $nozip) {
+#   Make ZIP file
+    Write-Host "Zipping..." -ForegroundColor Cyan
+    [array] $ZipContents = $ZipInputs | Get-Item
+    $DWINFolder = Get-Item -Path "$BuildTmpDir/$FirmwareFolderName"
+    $ZipContents += $DWINFolder
+    $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
+}
 
-# $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
-
-# if ($Deploy) {
-# 	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose -ErrorAction SilentlyContinue
-# 	Copy-Item "$BuildTmpDir/$FirmwareFolderName" -Destination $Deploy -Verbose -Force -Recurse
-# }
+if ($Deploy) {
+	Remove-Item -Path $(Join-Path $Deploy "DWIN_SET") -Recurse -Force -Verbose -ErrorAction SilentlyContinue
+	Copy-Item "$BuildTmpDir/$FirmwareFolderName" -Destination $Deploy -Verbose -Force -Recurse
+}
 
 # Done
 Write-Host ""
