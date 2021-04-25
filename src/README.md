@@ -12,6 +12,8 @@ This may seem like a chore, and it is, but you're going to need to bite the bull
 
 2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) do not work. 
 
+3. The touch screen comes with a kernel upgrade for the touch screen. If you have never run the Community Firmware release 5 beta or higher and you have a Creality CR-6, move the files in the "CR-6 kernel upgrade" directory to the DWIN_SET directory.
+
 ## SD card formatting instructions
 
 ### Windows Users
@@ -91,7 +93,9 @@ https://www.youtube.com/watch?v=9jk3lirEfg0
 
 ### What does a successful flash look like
 
-The flash process is completed when you see "END!" like shown in flash_succesful.jpg. Note that there are several lines showing updated files.
+The flash process is completed when you see "END!" like shown in flash_succesful.jpg. Note that there are several lines showing updated files (numbers shown that are higher than 000).
+
+Also "T5L1 DGUS2 V3.5 2020.07.30" is shown if you are using a CR-6 printer. If you don't have this move the files in the "CR-6 kernel upgrade" folder to the DWIN_SET folder and reflash.
 
 _When flashing has been succesful, repeat the procedure and additional two to three times. The DWIN touch screen doesn't always take "all" files during flashing, so repeating it a few times (by turning the printer off and then on again) should help with that._
 

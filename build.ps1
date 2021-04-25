@@ -50,6 +50,11 @@ Get-ChildItem -Path "$BuildTmpDir/$FirmwareFolderName" -Directory | Remove-Item 
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "13*.bin" | Rename-Item -NewName "13_Touch.bin"
 Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "14*.bin" | Rename-Item -NewName "14_Variables.bin"
 
+# ... Move kernel upgrades into their own folder-on-sd-card
+$KernelUpgradePath = Join-Path -Path $BuildTmpDir -ChildPath "CR-6 kernel upgrade"
+New-Item $KernelUpgradePath -ItemType Directory | Out-Null
+Get-ChildItem -Path $BuildTmpDir -Recurse -Filter "T5L_*.bin" | Move-Item -Destination $KernelUpgradePath
+
 # Check sector allocation
 Write-Host "Checking sector allocation..." -ForegroundColor Cyan
 
