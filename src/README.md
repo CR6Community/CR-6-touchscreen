@@ -111,7 +111,7 @@ If the motherboard is also flashed correctly, after restarting the printer the v
 
 - If, after rebooting the printer, a message is shown about "TFT version mismatch" (like in flash_failed2.jpg) then flashing is not successful.
 
-- if, after rebooting the printer, a message is shown about "Firmware flashed incorrectly" then your screen firmware might be flashed but your motherboard ignored the firmware update. This sometimes happens on Creality v4.5.2 boards - reformat your SD card and rename the ".bin" file to something like "today.bin" and retry.
+- if, after rebooting the printer, a message is shown about "Firmware flashed incorrectly" then your screen firmware might be flashed but your motherboard ignored the firmware update. You need to re-attempt flashing the motherboard. This sometimes happens on Creality v4.5.2/v4.5.3 boards - reformat your SD card and rename the ".bin" file of the motherboard firmware to something like "today.bin" or "1.bin" and retry.
 
 **NOTE** 
 We have observed with one user that even though the file counts were correct, the firmware still was not flashed correctly.
