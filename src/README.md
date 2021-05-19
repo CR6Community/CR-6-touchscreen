@@ -12,7 +12,7 @@ This may seem like a chore, and it is, but you're going to need to bite the bull
 
 2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) do not work. 
 
-3. The touch screen comes with a kernel upgrade for the touch screen. If you have never run the Community Firmware release 5 beta or higher and you have a Creality CR-6, move the files in the "CR-6 kernel upgrade" directory to the DWIN_SET directory.
+3. The touch screen comes with a kernel upgrade for the touch screen. If you have never run the Community Firmware release 5 beta or higher and you have a Creality CR-6, move the files in the "CR-6 kernel upgrade" directory to the DWIN_SET directory. Otherwise, when the touch screen flashing progress shows "T5L1 DGUS2 V3.5 2020.07.30" at the top, you don't have to do anything.
 
 ## SD card formatting instructions
 
