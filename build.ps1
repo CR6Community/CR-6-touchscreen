@@ -75,6 +75,7 @@ Write-Host "Zipping..." -ForegroundColor Cyan
 [array] $ZipContents = $ZipInputs | Get-Item
 $DWINFolder = Get-Item -Path "$BuildTmpDir/$FirmwareFolderName"
 $ZipContents += $DWINFolder
+$ZipContents += $(Get-Item -Path $KernelUpgradePath)
 $ZipContents | Compress-Archive -DestinationPath $OutputPath -CompressionLevel Optimal -Verbose
 }
 
