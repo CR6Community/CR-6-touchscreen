@@ -8,11 +8,13 @@ This may seem like a chore, and it is, but you're going to need to bite the bull
 
 ## Prequisites
 
-1. The CR-6 Community Firmware package downloaded from the 'releases tab'. Don't use the files from the Github source download directly - that won't work. Use the files delivered as assets as part of the release. The ZIP file of the touch screen is included within the release. If this file is called 'README.txt' - you have the correct package.
+1. The CR-6 Community Firmware package downloaded from the 'releases tab'. Don't use the files from the Github source download directly - that won't work. Use the files delivered as assets as part of the release. The ZIP file of the touch screen is included within the release. If the Touch Screen folder contains this file as 'README.txt' - you have the correct package.
 
-2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) do not work. 
+2. A micro-SD card of 16GB or less - of the type SD or [SDHC](https://en.wikipedia.org/wiki/SD_card#SDHC). It should be formatted FAT32 with 4096 cluster size. Read for instructions on your specific operating system below. 
+ 
+**UPDATE BY @Thinkersbluff: Note that cards of type [SDXC](https://en.wikipedia.org/wiki/SD_card#SDXC) must be partitioned, with the first primary partition being 15GB or less, and that partition then formatted FAT32 with 4096 cluster size. This video tutorial  demonstrates how it is done:** [SD Card Partitioning (in WIndows) Gone Wild!](https://www.youtube.com/watch?v=CEvQpMpNxbY&list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr&index=6) 
 
-3. The touch screen comes with a kernel upgrade for the touch screen. If you have never run the Community Firmware release 5 beta or higher and you have a Creality CR-6, move the files in the "CR-6 kernel upgrade" directory to the DWIN_SET directory. Otherwise, when the touch screen flashing progress shows "T5L1 DGUS2 V3.5 2020.07.30" at the top, you don't have to do anything.
+3. The touch screen comes with a kernel upgrade for the touch screen. If you have never run the Community Firmware release 5 beta or higher and you have a Creality CR-6, move the three .BIN files in the "CR-6 kernel upgrade" directory to the DWIN_SET directory. When the touch screen flashing progress shows "T5L1 DGUS2 V3.5 2020.07.30" at the top, the correct version of DGUS has been flashed to the display.
 
 ## SD card formatting instructions
 
@@ -30,7 +32,7 @@ You can either use a smaller SD card or can shrink the partition in Disk Manager
 
 ### Linux Users
 
-The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". Partition table type GPT might not be working, choose type dos.
+The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". **Partition table type GPT will not work, choose type dos.**
 
 Commands:
 	
@@ -84,14 +86,18 @@ Take the firmware archive and extract the DWIN_SET folder to the SD card, so tha
 
 Then, follow one of these YouTube videos to complete the flashing process:
 
-https://www.youtube.com/watch?v=Jswzrh2_ekk
-https://www.youtube.com/watch?v=2-Mnin3_1jw
-https://www.youtube.com/watch?v=9jk3lirEfg0
-https://www.youtube.com/watch?v=9jk3lirEfg0
+* https://www.youtube.com/watch?v=Jswzrh2_ekk
+* https://www.youtube.com/watch?v=2-Mnin3_1jw
+* https://www.youtube.com/watch?v=9jk3lirEfg0
+* https://www.youtube.com/watch?v=9jk3lirEfg0
 
-**Be careful that you don't short out the touch screen when flashing it. Ensure the power is not interrupted while flashing.**
+**UPDATE BY @Thinkersbluff: The above videos may omit the step of coping .BIN files to DWIN_SET
+This video tutorial series shows all of the steps: [How to flash the Community Firmware to your Creality CR6](https://www.youtube.com/playlist?list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr)**
 
-### What does a successful flash look like
+**Be careful that you don't short out the touch screen when flashing it.**
+**Ensure the power is not interrupted while flashing.**
+
+## What does a successful flash look like
 
 The flash process is completed when you see "END!" like shown in flash_succesful.jpg. Note that there are several lines showing updated files (numbers shown that are higher than 000).
 
@@ -103,7 +109,7 @@ After flashing the touch screen has succeeded, you can turn the printer off, and
 
 If the motherboard is also flashed correctly, after restarting the printer the version will be shown (like in flash_succesful2.jpg). Make sure the version matches with the release of the firmware you downloaded.
 
-### What does an unsuccessful flash look like
+## What does an unsuccessful flash look like
 
 - If you get an orange screen, flashing did **not** succeed.
 
