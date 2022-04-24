@@ -16,9 +16,6 @@ For as long as CF6.1 is the most recent release of the Community Firmware, there
 
 If flashing the original CF6.1 touchscreen firmware to your display hardware renders the display non-responsive, then flashing this firmware may enable you to use the CF6.1 firmware on your printer, after-all.  You may, however, also need to flash one of the other versions of the DGUS kernel to your display hardware, according to how the factory calibrated the display.  
 
-**First try flashing with NO DGUS kernel files in the DWIN_SET folder. If that works, you do not need to flash any kernel upgrade files to your display.**
-
-
 ## Instructions for Reverting to the Creality Stock Firmware
 
 IF you decide to revert your system back to the Creality firmware, and to abandon the Community Firmware, be sure to include the T5L_UI_DGUS2_V45_20220105.BIN kernel upgrade file in the Creality DWIN_SET folder before flashing the display.
