@@ -1,0 +1,10 @@
+The following issues have been observed but not resolved, at this DRAFT release:
+
+1. Upon completion of Filament Load or Unload:
+ - the final message confirming that the process has completed IS NOT displayed
+
+2. The two buttons at the top of the Prepare menu (LED and Sound) are meant to have ON/OFF icons that confirm the currently commanded state of those controls.  Neither ICON is appearing. Both buttons work, though.
+
+3. The LED ON/OFF button on the Printing->Tune screen is not appearing. The button does control the LED, though.
+
+IF you are able to help solve any of these issues, please message @Thinkersbluff with the key info.  TIA!
