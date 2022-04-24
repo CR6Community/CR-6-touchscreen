@@ -8,6 +8,8 @@ Creality has since begun delivering the CR6 printers with a different version of
 
 The original firmware would not run on that hardware or on the v4.5 operating system. This version of the firmware has therefore been refactored from the original, to be made compatible with that new generation of DWIN TFT displays.
 
+This refactored version should run on any DGUS OS version 2 or higher. (Original Kickstarter machines were delivered with v1.4)
+
 ## Recommendations for using this firmware
 
 For as long as CF6.1 is the most recent release of the Community Firmware, there is no advantage to flashing this variation of the firmware to your printer.
@@ -43,9 +45,9 @@ The touch screen is very picky when it comes to SD cards, partitioning and parti
 
 ### Windows Users
 
-If you prefer to use Windows 10 or 11 applications, use the Windows Disk Management application to verify or adjust the partition type and size and to format the SD card.  SD, SDHC and SDXC cards will all work.
+If you prefer to use Windows 10 or 11 applications, use the Windows Disk Management application to verify or adjust the partition type and size and to format the SD card.  
 
-This YouTube video shows you how: https://www.youtube.com/watch?v=CEvQpMpNxbY&list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr&index=6
+Both SDHC and SDXC cards will work.
 
 If you can't find the option for 4096 sector size, when formatting your SD card, then the partition is too large.  You can either use a smaller SD card or you can shrink or split the partition in Disk Manager. (NOTE: The Disk Management application can only shrink partitions formatted NTFS, so you may need to reformat the partition before shrinking it.)
 
@@ -161,7 +163,7 @@ If the touchscreen looks right after flashing but does not respond when you tap 
 
 ![Flashing of touch screen successful](flash_succesful2.jpg)
 
-**flash_failed.jpg** shows the indicators that flashing has been unsuccessful
+**flash_failed.jpg** shows the indicators that flashing has been unsuccesful
 
 ![Flashing of touch screen failed](flash_failed.jpg)
 
