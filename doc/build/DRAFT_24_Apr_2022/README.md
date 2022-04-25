@@ -8,7 +8,7 @@ Creality has since begun delivering the CR6 printers with a different version or
 
 DGUS2 v4.5 & higher requires a different calibration of the display screen to run than did v3.5. Following the CF6.1 installation instructions to flash v3.5 with CF6.1 causes the v4.5 screen calibration to be invalid, resulting in the touchsceen becoming non-responsive after flashing CF6.1.
 
-This version of the firmware has therefore been refactored from the original, to be made compatible with that new configuration of the DWIN TFT displays.  O
+This version of the firmware has therefore been refactored from the original, to be made compatible with that new configuration of the DWIN TFT displays.
 
 This refactored version should run on any DGUS OS version 2 or higher. (Original Kickstarter machines were delivered with v1.4)
 
