@@ -16,12 +16,12 @@ This refactored version should run on any DGUS OS version 2 or higher. (Original
 
 **NOTE: As always, flashing this firmware to your system is done entirely at your own risk. The CR-6 Community firmware developers take no responsibility for any consequences of flashing this firmware to your system.**
 
-For as long as CF6.1 is the most recent release of the Community Firmware, there is no advantage to flashing this variation of the firmware to your printer.
+For as long as CF6.1 is the most recent release of the Community Firmware, there is no advantage to flashing this variation of the firmware to your printer, if you are already running CF6.1 successfully.
 
-If flashing the original CF6.1 touchscreen firmware to your display hardware renders the display non-responsive, then flashing this firmware may enable you to use the CF6.1 firmware on your printer, after-all.  You may, however, also need to flash one of the other versions of the DGUS kernel to your display hardware, according to how the factory calibrated the display.  
+If flashing the original CF6.1 touchscreen firmware to your display hardware renders the display non-responsive, and if your display was previously calibrated to work with DGUS2 v4.5 or higher, then flashing this firmware may enable you to use the CF6.1 firmware on your printer, after-all.  (see Example below)
 
 ### Example - "Flashing CF6.1 with the DGUS2 v3.5 kernel upgrade files seems to have "bricked" my printer" 
-If you first tried flashing the CF6.1 firmware to your display, carefully including the three DGUS kernel "upgrade" files in DWIN_SET, and your system had been running DGUS2 v4.5, then you will likely find that your touchscreen has become non-responsive and flashing back to the Creality stock firmware also does not fix this.
+If you first tried flashing the CF6.1 firmware to your display, carefully including the three DGUS2 v3.5 kernel "upgrade" files in DWIN_SET, and your system had been running DGUS2 v4.5, then you will likely find that your touchscreen has become non-responsive and flashing back to the Creality stock firmware also does not fix this.
 
 You have two options, at this point:
 
@@ -29,11 +29,11 @@ You have two options, at this point:
 2. You can flash this refactored version of the CF6.1 UI to your display and restore DGUS2 to v4.5
  
 To flash this refactored UI and restore DGUS2 to v4.5:
-* copy T5L_UI_DGUS2_V45_20220105.BIN from the DGUS2 kernel upgrade files folder in this repository to the DWIN_SET folder in this repository
-* delete the DWIN_SET folder from the SD card with which you previously flashed your display.  
-* copy the new DWIN_SET folder to that SD card
-* re-flash your display and cycle power
-* the CF6.1 interface should now work correctly
+1. Delete the DWIN_SET folder from the SD card with which you previously flashed your display.
+2. Copy T5L_UI_DGUS2_V45_20220105.BIN from the DGUS2 kernel upgrade files folder in this repository to the DWIN_SET folder in this repository
+3. Copy the new DWIN_SET folder to the SD card
+4. Re-flash your display and cycle power
+5. The CF6.1 interface should now work correctly
 
 ## Instructions for Reverting to the Creality Stock Firmware
 
