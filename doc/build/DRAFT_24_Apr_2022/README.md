@@ -4,32 +4,50 @@
 
 The original CF6.1 touch screen firmware was designed and distributed to run on the DGUS2 v3.5 operating system and on the original DWIN display hardware being delivered with CR6 printers up until December 2021.
 
-Creality has since begun delivering the CR6 printers with a different version of the display hardware, running a more recent version of DGUS2 (v4.5, at the time of this release.) 
+Creality has since begun delivering the CR6 printers with a different version or configuration of the display hardware, running a more recent version of DGUS2 (v4.5, at the time of this release.) 
 
-The original firmware would not run on that hardware or on the v4.5 operating system. This version of the firmware has therefore been refactored from the original, to be made compatible with that new generation of DWIN TFT displays.
+DGUS2 v4.5 & higher requires a different calibration of the display screen to run than did v3.5. Following the CF6.1 installation instructions to flash v3.5 with CF6.1 causes the v4.5 screen calibration to be invalid, resulting in the touchsceen becoming non-responsive after flashing CF6.1.
+
+This version of the firmware has therefore been refactored from the original, to be made compatible with that new configuration of the DWIN TFT displays.  O
 
 This refactored version should run on any DGUS OS version 2 or higher. (Original Kickstarter machines were delivered with v1.4)
 
 ## Recommendations for using this firmware
 
-For as long as CF6.1 is the most recent release of the Community Firmware, there is no advantage to flashing this variation of the firmware to your printer.
+**NOTE: As always, flashing this firmware to your system is done entirely at your own risk. The CR-6 Community firmware developers take no responsibility for any consequences of flashing this firmware to your system.**
 
-**First try flashing with NO DGUS kernel files in the DWIN_SET folder. If that works, you do not need to flash any kernel upgrade files to your display.**
+For as long as CF6.1 is the most recent release of the Community Firmware, there is no advantage to flashing this variation of the firmware to your printer.
 
 If flashing the original CF6.1 touchscreen firmware to your display hardware renders the display non-responsive, then flashing this firmware may enable you to use the CF6.1 firmware on your printer, after-all.  You may, however, also need to flash one of the other versions of the DGUS kernel to your display hardware, according to how the factory calibrated the display.  
 
+### Example - "Flashing CF6.1 with the DGUS2 v3.5 kernel upgrade files seems to have "bricked" my printer" 
+If you first tried flashing the CF6.1 firmware to your display, carefully including the three DGUS kernel "upgrade" files in DWIN_SET, and your system had been running DGUS2 v4.5, then you will likely find that your touchscreen has become non-responsive and flashing back to the Creality stock firmware also does not fix this.
+
+You have two options, at this point:
+
+1. You can revert to the Creality stock firmware (see below)
+2. You can flash this refactored version of the CF6.1 UI to your display and restore DGUS2 to v4.5
+ 
+To flash this refactored UI and restore DGUS2 to v4.5:
+* copy T5L_UI_DGUS2_V45_20220105.BIN from the DGUS2 kernel upgrade files folder in this repository to the DWIN_SET folder in this repository
+* delete the DWIN_SET folder from the SD card with which you previously flashed your display.  
+* copy the new DWIN_SET folder to that SD card
+* re-flash your display and cycle power
+* the CF6.1 interface should now work correctly
+
 ## Instructions for Reverting to the Creality Stock Firmware
 
-IF you decide to revert your system back to the Creality firmware, and to abandon the Community Firmware, be sure to include the T5L_UI_DGUS2_V45_20220105.BIN kernel upgrade file in the Creality DWIN_SET folder before flashing the display.
+IF you decide to revert your system back to the Creality firmware, and to abandon the Community Firmware, then copy the T5L_UI_DGUS2_V45_20220105.BIN kernel upgrade file into the Creality DWIN_SET folder before flashing the display.
 
 ## Instructions for Reverting to the Released CF6.1-Final Display Firmware
 
-If you decide to abandon this DRAFT release of the next gen display firmware, just repeat the steps you did last time you flashed that firmware to your sytem. Remember to copy the DGUS2 v3.5 kernel upgrade files into the CF6.1-Final TouchScreen DWIN_SET folder, before flashing it.
+If you decide to abandon this DRAFT release of the next gen display firmware, just repeat the steps you did last time you flashed that firmware to your system. Remember to copy the DGUS2 v3.5 kernel upgrade files into the CF6.1-Final TouchScreen DWIN_SET folder, before flashing it, if your display was calibrated to work with a DGUS2 kernel prior to v4.5.
 
 
-# Instructions for flashing this display firmware
+# Detailed Instructions for flashing this display firmware
 
-As always, you flashing this firmware to your system is done entirely at your own risk. The CR-6 Community firmware developers take no responsibility for any consequences of flashing this firmware to your system.
+**NOTE: If you have successfully flashed your system by following the above instructions, then you do not need to read this section.
+These detailed instructions are offered for use by those who were not able to succeed by following only what is written above.**
 
 The touch screen is very picky when it comes to SD cards, partitioning and partition sizes. If you did follow the instructions below and still you could not flash the files properly, try a different SD card and double check that you followed the instructions accurately.
 
