@@ -55,15 +55,19 @@ If, however, you wish to re-calibrate your display hardware (e.g. to enable chan
 **Our Discord Community member @ScratchFury has posted this YouTube video of this process: https://youtu.be/oaiXSls1NXs**
 
 The process is as follows:
+
 0. Ensure that your display is already flashed with the DGUS2 version that you wish to calibrate. (OR include the applicable kernel file in DWIN_SET with the T5LCFG_Calibrate_Touchscreen.CFG file)
 
-1. Use any Hex editor program to view and edit a copy of the T5LCFG_272480.CFG to create your own copy of T5LCFG_Calibrate_Touchscreen.CFG, by making the following three edits to that file:
+1. [Optionally] You can use any Hex editor program to view and edit a copy of the T5LCFG_272480.CFG to create your own copy of T5LCFG_Calibrate_Touchscreen.CFG, by making the following three edits to that file:
 
 1.1 Change the contents of address 0x05 to 38
 1.2 Change the contents of address 0x20 to 5a
 1.3 Change the contents of address 0x21 to 0b
 
+Alternatively - Download and open T5LCFG_Calibrate_Touchscreen.CFG from this repository in a HEX editor
+
 The resulting file should look like this, in the HEX editor: 
+
 ![image](https://user-images.githubusercontent.com/36551518/165141828-cffbc04c-117e-4b0d-8958-bf83b1f37e03.png)
 
 2. Save the modified file as T5LCFG_Calibrate_Touchscreen.CFG.
