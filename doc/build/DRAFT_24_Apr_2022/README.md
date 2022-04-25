@@ -50,9 +50,11 @@ If you decide to abandon this DRAFT release of the next gen display firmware, ju
 
 DWIN display calibration is normally done at the factory & should not need to be done again by the user.
 
-If, however, you wish to re-calibrate your display hardware (e.g. to enable changing the DGUS2 OS from v3.5 to v4.5 or higher), the process is as follows:
+If, however, you wish to re-calibrate your display hardware (e.g. to enable changing the DGUS2 OS from v3.5 to v4.5 or higher), you do this at your own risk. 
+
 **Our Discord Community member @ScratchFury has posted this YouTube video of this process: https://youtu.be/oaiXSls1NXs **
 
+The process is as follows:
 0. Ensure that your display is already flashed with the DGUS2 version that you wish to calibrate. (OR include the applicable kernel file in DWIN_SET with the T5LCFG_Calibrate_Touchscreen.CFG file)
 
 1. Use any Hex editor program to view and edit a copy of the T5LCFG_272480.CFG to create your own copy of T5LCFG_Calibrate_Touchscreen.CFG, by making the following three edits to that file:
