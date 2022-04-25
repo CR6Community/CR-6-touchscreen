@@ -44,51 +44,6 @@ IF you decide to revert your system back to the Creality firmware, and to abando
 
 If you decide to abandon this DRAFT release of the next gen display firmware, just repeat the steps you did last time you flashed that firmware to your system. Remember to copy the DGUS2 v3.5 kernel upgrade files into the CF6.1-Final TouchScreen DWIN_SET folder, before flashing it, if your display is calibrated to work with a DGUS2 kernel prior to v4.5.
 
-## Instructions for Calibrating DWIN Display Hardware
-
-**CAUTION - DWIN display calibration is definitely not for the faint-hearted. DWIN warn that you can brick your display, if you don't do this correctly.**
-
-DWIN display calibration is normally done at the factory & should not need to be done again by the user.
-
-If, however, you wish to re-calibrate your display hardware (e.g. to enable changing the DGUS2 OS from v3.5 to v4.5 or higher OR to revert from v4.5 back to v3.5), you do this at your own risk. 
-
-**Our Discord Community member @ScratchFury has posted this YouTube video of this process: https://youtu.be/oaiXSls1NXs**
-
-The process is as follows:
-
-0. Ensure that your display is already flashed with the DGUS2 version that you wish to calibrate. (OR include the applicable kernel file in DWIN_SET with the T5LCFG_Calibrate_Touchscreen.CFG file)
-
-1. [Optionally] You can use any Hex editor program to view and edit a copy of the T5LCFG_272480.CFG to create your own copy of T5LCFG_Calibrate_Touchscreen.CFG, by making the following three edits to that file:
-
-1.1 Change the contents of address 0x05 to 38
-1.2 Change the contents of address 0x20 to 5a
-1.3 Change the contents of address 0x21 to 0b
-
-Alternatively - Download and open T5LCFG_Calibrate_Touchscreen.CFG from this repository in a HEX editor
-
-The resulting file should look like this, in the HEX editor: 
-
-![image](https://user-images.githubusercontent.com/36551518/165141828-cffbc04c-117e-4b0d-8958-bf83b1f37e03.png)
-
-2. Save the modified file as T5LCFG_Calibrate_Touchscreen.CFG.
-
-3. To activate the calibration screen on your display, put T5LCFG_Calibrate_Touchscreen.CFG into a folder called DWIN_SET on your SD card (IMPORTANT: Make sure it is the ONLY CFG file in the DWIN_SET folder)
-
-4. Flash T5LCFG_Calibrate_Touchscreen.CFG to your display
-5. Cycle power off/on
-6. The screen displays coloured noise on this first power-up.  Keep the faith.
-7. Cycle power off/on
-8. The screen now displays a series of five crosses as you perform the calibration routine.  Your goal is to tap the pixel at the center of each cross (use a stylus for best results)
-9. When you have tapped all 5 crosses, power off the display.
-10. Delete the DWIN_SET folder from the SD card
-11. Copy/paste the DWIN_SET folder from this repository onto the SD card. 
-12. Flash this DWIN_SET to your display.
-13. Cycle power off/on
-14. Same as step 6 above.
-15. Same as step 7 above
-16. The screen should now display the CF6.1 UI and all should be well.
-
-
 # Detailed Instructions for flashing this display firmware
 
 **NOTE: If you have successfully flashed your system by following the above instructions, then you do not need to read this section.
@@ -248,3 +203,5 @@ If the screen stops responding or is not displaying properly, try reflashing the
 # If you need more help
 
 Check this video tutorial playlist on YouTube: https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr
+
+
