@@ -10,7 +10,8 @@ DGUS2 v4.5 & higher requires a different calibration of the display screen to ru
 
 This version of the firmware has therefore been refactored from the original, to be made compatible with that new configuration of the DWIN TFT displays.
 
-This refactored version should run on any DGUS OS version 2 or higher. (Original Kickstarter machines were delivered with v1.4)
+This refactored version of the firmware should run on any DGUS OS version 2 or higher. (Original Kickstarter machines were delivered with v1.4)
+The display hardware will, however, still need to be configured to work with the installed version of DGUS2, so you will also need to ensure that the display calibration and the DGUS2 versions match, as explained herein.
 
 ## Recommendations for using this firmware
 
