@@ -42,7 +42,7 @@ IF you decide to revert your system back to the Creality firmware, and to abando
 
 ## Instructions for Reverting to the Released CF6.1-Final Display Firmware
 
-If you decide to abandon this DRAFT release of the next gen display firmware, just repeat the steps you did last time you flashed that firmware to your system. Remember to copy the DGUS2 v3.5 kernel upgrade files into the CF6.1-Final TouchScreen DWIN_SET folder, before flashing it, if your display was calibrated to work with a DGUS2 kernel prior to v4.5.
+If you decide to abandon this DRAFT release of the next gen display firmware, just repeat the steps you did last time you flashed that firmware to your system. Remember to copy the DGUS2 v3.5 kernel upgrade files into the CF6.1-Final TouchScreen DWIN_SET folder, before flashing it, if your display is calibrated to work with a DGUS2 kernel prior to v4.5.
 
 ## Instructions for Calibrating DWIN Display Hardware
 
