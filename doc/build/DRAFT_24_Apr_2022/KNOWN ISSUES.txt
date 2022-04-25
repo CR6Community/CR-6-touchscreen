@@ -4,4 +4,6 @@ The following issues have been observed but not resolved, at this DRAFT release:
 
 2. The ABLprocess no longer uses the contents of 35_Autolevel.icl to animate the collection & display of the mesh data.  To enable old eyes to read the mesh, the normally white background of the initial screen has been changed to black.  As a result, when the process first initializes all of the values to 0.000 in white, those zeroes are now visible to the user. This will not look familiar to past users of 6.1, but should not be a problem for new users.
 
+3. The LED ON/OFF button should be nudged +1 in X position and -2 in Y position, to properly mask the dotted lines on the bitmap.
+
 IF you are able to help solve any of these issues, please message @Thinkersbluff with the key info.  TIA!
