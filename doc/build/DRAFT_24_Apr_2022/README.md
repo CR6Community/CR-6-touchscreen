@@ -30,7 +30,7 @@ You have two options, at this point:
 2. You can flash this refactored version of the CF6.1 UI to your display and restore DGUS2 to v4.5
  
 To flash this refactored UI and restore DGUS2 to v4.5:
-1. Delete the DWIN_SET folder from the SD card with which you previously flashed your display.
+1. Delete the DWIN_SET folder from the SD card with which you previously flashed your display. (Make sure you keep a copy!)
 2. Copy T5L_UI_DGUS2_V45_20220105.BIN from the DGUS2 kernel upgrade files folder in this repository to the DWIN_SET folder in this repository
 3. Copy the new DWIN_SET folder to the SD card
 4. Re-flash your display and cycle power
