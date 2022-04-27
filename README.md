@@ -18,7 +18,7 @@ If you wish to contribute to the project, please provide your inputs by contribu
 
 [InsanityAutomation](https://github.com/InsanityAutomation/Marlin/tree/CrealityDwin2.0_Bleeding) initiated and leads this project. It is upon his work that Thinkersbluff is building.
 
-[The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits)
+[The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits) did the heavy-lifting that resulted in the CF6.1 baseline.
 
 Icons from [Font Awesome](https://fontawesome.com/) and [Remix Icon](https://remixicon.com/).
 
