@@ -1,6 +1,5 @@
 # CR-6 Touchscreen software
-Attempt to extend the CR-6 touch screen software to operate with newer display hardware being sold with CR6 machines as of approximately Dec 2021.
-This repository belongs to Thinkersbluff and is forked from [the CR6Community Touchscreen Firmware repository](https://github.com/CR6Community/CR-6-touchscreen).
+Attempt to extend the CR-6-touchscreen software to operate with newer display hardware being sold with CR6 machines as of approximately Dec 2021.
 
 ## Downloads
 
