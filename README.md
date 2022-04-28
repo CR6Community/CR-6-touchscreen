@@ -32,7 +32,7 @@ If you wish to contribute to the project, please provide your inputs by raising 
 
 ## Credits
 
-[InsanityAutomation](https://github.com/InsanityAutomation/Marlin/tree/CrealityDwin2.0_Bleeding) initiated and leads this project. It is upon his work that Thinkersbluff is building.
+[InsanityAutomation](https://github.com/InsanityAutomation/Marlin/tree/CrealityDwin2.0_Bleeding) initiated the refactoring project. It is upon his work that Thinkersbluff has built this Release.
 
 [The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits) did the heavy-lifting that resulted in the CF6.1 baseline.
 
