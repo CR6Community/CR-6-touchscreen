@@ -18,11 +18,11 @@ Good luck, and if you maintain your own translated firmware, please let us know!
 
 ## Documentation for development
 
-You need the DGUS v8.2.1.14.x software for editing the touch screen. (See Tools)
+You need [the DGUS v8.2.1.14.x software](https://github.com/CR6Community/CR-6-touchscreen/releases/download/v2.0.8.1-cr6-community-release-6.1/DGUS_Tool_V8.2.1.14.7z) for editing the touch screen.
 
 You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
-![DGUS II interface](https://github.com/CR6Community/CR-6-touchscreen/blob/2fe14972eb589015c2dfe51d803f5abe99a1d592/doc/dgus2util.png)
+![DGUS II interface](https://github.com/Thinkersbluff/CR-6-touchscreen_Thinkersbluff_Fork/blob/extui/doc/dgus2util.png)
 
 ### Build firmware archive
 
