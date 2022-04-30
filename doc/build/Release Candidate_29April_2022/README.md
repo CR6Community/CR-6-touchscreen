@@ -1,5 +1,7 @@
 # Release#: 61F_RC_290422_v1
 
+## NOTE: As of this release, the release# is branded in orange on the load screen and on the Setup->INFO screen. If you do not see this release number on your system, you have not flashed this version of the touchscreen firmware. 
+
 # Introduction
 
 ## If you are already running CF6.1-Final successfully on your printer
