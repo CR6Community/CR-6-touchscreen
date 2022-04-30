@@ -1,8 +1,10 @@
+# Release#: 61F_RC_290422_v1
+
 # Introduction
 
 ## If you are already running CF6.1-Final successfully on your printer
 
-There is no reason to flash this re-factored firmware. You should ignore this release.
+There is no reason to flash this re-factored firmware. You can ignore this release.
 
 ## Background
 
