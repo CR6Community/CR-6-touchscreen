@@ -1,4 +1,4 @@
-# Release#: 61F_RC_090522_v1
+# Release#: 61F_RC_090522_v2
 
 ## NOTE: As of this release, the release# is branded in orange on the load screen and on the Setup->INFO screen. If you do not see this release number on your system, you have not flashed this version of the touchscreen firmware. 
 
@@ -13,6 +13,15 @@
 - 57_thermal_runaway.bmp
 - 58_heatingfailed.bmp
 - 59_ThermistorError.bmp
+
+
+### New at v2: 
+
+1. Shifted Bed Temp field left by 14pts, to remove overlap with target temp
+
+2. Added Note 2 to this README, about a white noise screen appearing after flashing some screens running v4.5
+
+3. Added two more items to the "Known Issues.txt" file.
 
 
 ## Background
