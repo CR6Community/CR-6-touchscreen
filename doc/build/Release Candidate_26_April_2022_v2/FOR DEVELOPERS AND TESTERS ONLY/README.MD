@@ -7,7 +7,13 @@ DWIN display calibration is normally done at the factory & should not need to be
 If, however, you wish to re-calibrate your display hardware (e.g. to enable changing the DGUS2 OS from v3.5 to v4.5 or higher OR to revert from v4.5 back to v3.5), you do this at your own risk. 
 
 **Our Discord Community member @ScratchFury has posted this YouTube video of this process, to go from DGUS2 v3.5 to v4.5+: https://youtu.be/oaiXSls1NXs**
-To revert your display from v4.5+ back to v3.5 requires a similar configuration process. What differs is that you need to flash the v3.5 kernel upgrade files with the T5LCFG_Calibrate_Touchscreen.CFG file, at step 0 (or step 3)
+
+To revert your display from v4.5+ back to v3.5 requires a similar configuration process. 
+What differs is that:
+1. You need to flash the v3.5 kernel upgrade files with the same T5LCFG_Calibrate_Touchscreen.CFG file, at step 0 (or step 3) below.
+2. At step 8, there are only four calibration crosses (in the corners of the screen) and they are not visible on the screen, so you need to touch the corners on faith, in this order: upper left, upper right, bottom right, bottom left. 
+
+**Again, @ScratchFury has posted a YouTube video of this process of going from v4.5 to v3.5: https://www.youtube.com/watch?v=g3zH8nUG3eE**
 
 The process is as follows:
 
