@@ -42,10 +42,10 @@ The resulting file should look like this, in the HEX editor:
 5. Cycle power off/on
 6. The screen displays coloured noise on this first power-up.  Keep the faith.
 7. Cycle power off/on
-8. The screen now displays a series of five crosses as you perform the calibration routine.  Your goal is to tap the pixel at the center of each cross, as and where it appears on the screen (use a stylus for best results)
+8. The screen now displays - in landscape mode - a series of five crosses as you perform the calibration routine.  Your goal is to tap the pixel at the center of each cross, as and where it appears on the screen (use a stylus for best results)
 9. When you have tapped all 5 crosses, power off the display.
 10. Delete the DWIN_SET folder from the SD card
-11. Copy/paste the DWIN_SET folder from this repository onto the SD card. 
+11. Copy/paste the DWIN_SET folder from this repository onto the SD card. Ensure that it also contains the file T5L_280472.CFG, which will reset the screen orientation to portrait mode. 
 12. Flash this DWIN_SET to your display.
 13. Cycle power off/on
 14. Same as step 6 above.
