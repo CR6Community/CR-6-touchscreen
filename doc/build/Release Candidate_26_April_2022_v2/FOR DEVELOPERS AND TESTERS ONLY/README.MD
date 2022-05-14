@@ -11,9 +11,10 @@ If, however, you wish to re-calibrate your display hardware (e.g. to enable chan
 To revert your display from v4.5+ back to v3.5 requires a similar configuration process. 
 What differs is that:
 1. You need to flash the v3.5 kernel upgrade files with the same T5LCFG_Calibrate_Touchscreen.CFG file, at step 0 (or step 3) below.
-2. At step 8, there are only four calibration crosses (in the corners of the screen) and they are not visible on the screen, so you need to touch the corners on faith, in this order: upper left, upper right, bottom right, bottom left. 
+2. At step 8, there are only four calibration crosses (in the corners of the screen) and they are not visible on the screen, so you need to touch the corners on the screen, in this order: bottom left, upper left, upper right, bottom right. 
 
 **Again, @ScratchFury has posted a YouTube video of this process of going from v4.5 to v3.5: https://www.youtube.com/watch?v=g3zH8nUG3eE**
+NOTE: ScratchFury refers to the bottom left corner of the physical screen as "upper left" in his video, because the screen display is rotated and he is refering to the upper left corner of the displayed info screen.
 
 The process is as follows:
 
@@ -41,7 +42,7 @@ The resulting file should look like this, in the HEX editor:
 5. Cycle power off/on
 6. The screen displays coloured noise on this first power-up.  Keep the faith.
 7. Cycle power off/on
-8. The screen now displays a series of five crosses as you perform the calibration routine.  Your goal is to tap the pixel at the center of each cross (use a stylus for best results)
+8. The screen now displays a series of five crosses as you perform the calibration routine.  Your goal is to tap the pixel at the center of each cross, as and where it appears on the screen (use a stylus for best results)
 9. When you have tapped all 5 crosses, power off the display.
 10. Delete the DWIN_SET folder from the SD card
 11. Copy/paste the DWIN_SET folder from this repository onto the SD card. 
