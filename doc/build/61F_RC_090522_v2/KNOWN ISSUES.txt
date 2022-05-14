@@ -7,6 +7,8 @@ While disconcerting and a bit of a nuisance (since it hides the success screen i
 
 CAUTION: We do not know whether there are any other settings in the CFG file that are important to the success of this flash, so we caution against just removing this file before flashing in the first place.  You may find it works ok to do so.
 
-3. Although we have added the display of temperature readings and target values to three thermal warning screens, initial testing shows that the displayed values are all zeroes, instead of the hoped-for dump of the values "seen" by Marlin, when it threw the error.  We continue to investigate whether we will also require a mainboard firmware change to fully implement this particular modification.
+3. Although we have added the display of temperature readings and target values to three thermal warning screens, initial testing shows that the displayed values are all zeroes, instead of the hoped-for dump of the values "seen" by Marlin, if there is already a short-circuit on one or both thermistors, when the printer is powered-up.  
+The modification did work as intended if the short circuit occurs after the printer has powered-up. The Heating Failed error condition was also confirmed to correctly display the thermal data.  We have not yet determined how to test the Thermistor Error screen.
+We continue to investigate whether we will also require a mainboard firmware change to fully implement this particular modification.
 
 IF you find any other issues, please message @Thinkersbluff with the key info.  TIA!
