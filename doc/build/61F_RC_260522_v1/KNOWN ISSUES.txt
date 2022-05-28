@@ -1,0 +1,10 @@
+The following issues have been observed but not resolved, at this DRAFT release:
+
+1. The ABLprocess no longer uses the contents of 35_Autolevel.icl to animate the collection & display of the mesh data.  To enable old eyes to read the mesh, the normally white background of the initial screen has been changed to black.  As a result, when the process first initializes all of the values to 0.000 in white, those zeroes are now visible to the user, until replaced by the probing process. This will not look familiar to past users of 6.1, but should not be a problem for new users.
+
+2. Although we have added the display of temperature readings and target values to three thermal warning screens, initial testing shows that the displayed values are all zeroes, instead of the hoped-for dump of the values "seen" by Marlin, if there is already a short-circuit on one or both thermistors, when the printer is powered-up.  
+The modification did work as intended if the short circuit occurs after the printer has powered-up. The Heating Failed error condition was also confirmed to correctly display the thermal data.  
+We have not yet determined how to test the Thermistor Error screen. 
+We continue to investigate whether we will also require a mainboard firmware change to fully implement this particular modification.
+
+IF you find any other issues, please message @Thinkersbluff with the key info.  TIA!
