@@ -91,7 +91,7 @@ Then, follow one of these YouTube videos to complete the flashing process:
 * https://www.youtube.com/watch?v=9jk3lirEfg0
 * https://www.youtube.com/watch?v=9jk3lirEfg0
 
-**UPDATE BY @Thinkersbluff: The above videos may omit the step of coping .BIN files to DWIN_SET
+**UPDATE BY @Thinkersbluff: The above videos may omit the step of copying .BIN files to DWIN_SET
 This video tutorial series shows all of the steps: [How to flash the Community Firmware to your Creality CR6](https://www.youtube.com/playlist?list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr)**
 
 **Be careful that you don't short out the touch screen when flashing it.**
