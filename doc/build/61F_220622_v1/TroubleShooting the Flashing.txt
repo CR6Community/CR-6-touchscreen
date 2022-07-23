@@ -1,0 +1,208 @@
+**NOTE: If you have successfully flashed your system by following the instructions in the README.MD file, then you do not need to read this file.**
+
+**These troubleshooting instructions are offered for use by those who were not able to succeed at flashing this DWIN_SET to their display by following the README.**
+
+
+# I see the main menu screen, but tapping the buttons on the screen doesn't do anything
+
+## Verify that the correct version of DGUS2 is installed on your display
+
+**NOTE: This is why it was STEP 1 of the README recommendations to identify which DGUS2 was running on your hardware before you started flashing anything.**
+
+ - If you inadvertently flashed your display with DGUS2 v3.5, but your display was factory-calibrated for DGUS v4.5, the screen is likely to be non-responsive.  Try flashing it back to v4.5 (per the README in the kernel upgrades folder).
+
+ - If you inadvertently flashed your display with DGUS2 v4.5, but your display was factory-calibrated for DGUS v3.5, the screen is likely to be blank.  Try flashing it back to v3.5.
+
+
+ ## Verify that you have met all of the following Pre-Requisites
+
+1. The correct configuration of the CF6.1-Final CR6 Community Firmware must already be flashed to the printer motherboard.
+
+
+# If the Display did not flash from your SD card (the screen remained blank or zero files were copied)
+
+## You must have prepared a micro-SD card per the "SD card formatting instructions" below, to host the DWIN_SET folder
+ 
+ NOTE: SD, SDHC and SDXC cards will all work with the display, but:
+ - the card must be partitioned to the Master Boot Record (MBR) standard, not GPT
+ - the first partition **must** be a Primary Partition, formatted FAT32 with an allocation unit size of 4096 sectors.  To achieve that FAT32 format with an SDHC or SDXC card, the first Primary Partition must be 16GB or less.
+
+ This YouTube video explains and demonstrates how to prepare SDHC or SDXC cards: https://youtu.be/CEvQpMpNxbY
+ 
+
+## Try a Different SD card
+
+The touch screen is very picky when it comes to SD cards, partitioning and partition sizes. 
+
+If you did follow the README instructions carefully and you still could not flash the files properly, try a different SD card and double check that you follow the SD card formatting instructions precisely.  
+
+
+## Try a Full (not Quick) Format of the Card
+
+We have seen bad sectors on an SD card cause the screen to become blank when trying to flash from that card.
+This condition can also cause the same card to work sometimes and not others, so it is not intuitive that the card may be the issue.
+
+
+## SD card formatting instructions
+
+### Windows Users
+
+You can use the Windows File Explorer to format 16GB cards or smaller, to FAT32, 4096.
+
+#### If you are trying to format an SDHC 32GB card, or a larger (SDXC) card, and can't find the option for FAT32, 4096 in File Explorer when formatting your SD card
+The partition is too large.  You can either use a smaller SD card or you can shrink or split the partition in Disk Manager.
+
+NOTE: Disk Manager can only shrink volumes which are formatted NTFS.  If the card is already formatted FAT32 with the wrong allocation unit size, you can use Disk Manager to:
+
+1. Format the card back to NTFS
+2. Shrink or Split the volume, so that the first Primary Partition is smaller than 16GB
+3. Format the first Primary Partition on the card to FAT32, 4096
+
+
+#### If the card shows that the first partition is a Logical Partition instead of a Primary Partition
+The printer will not be able to read the card, until you create a Primary Partition as the first partition on that card.
+
+If there is Unallocated Space on the card, to the left of the Logical Partition, right click on that space and select Create New Volume.  Use the Wizard to create a new Primary Partition in that space.  Format that new partition FAT32, 4096.
+
+If there is no Unallocated Space to the left of the Logical Partition, you can try right-clicking that partition and shrinking that volume to create unallocated space. (NOTE that a partition must be formatted NTFS, to be able to shrink it)
+
+If you are not able to create a Primary Partition on that card, you may need to delete the volume on which the Logical Partition(s) exist. 
+
+**Be aware that Disk Manager may not be able to read an SD card that has NO volumes on it.**  
+If you delete all volumes on the card and Disk Manager is no longer able to launch the Create New Volume Wizard for that card, you may need to use a commercial Disk Partitioning software to recover the card. 
+
+Alternatively, you may find that a digital camera or an alternative (eg. Linux or Mac) system can reformat the card for you.
+
+
+### Linux Users
+
+The SD-card should be formatted FAT32 with 4096 cluster size, with only one partition on the card, starting at sector 8192. The partion should be of type b, "W95 FAT32". Partition table type GPT does not work. The card must be partitioned as MBR, so choose type DOS.
+
+Commands:
+	
+	fdisk /dev/sdX where sdX is your SD card's device
+	
+In fdisk:
+
+	o (new DOS(MBR) partition table)
+	n (new partition)
+	p (primary)
+	1 (partition nr)
+	8192 (starting sector)
+	enter (last sector) ---> if your SD card is bigger than 8Gb, enter a lower sector number here so that the partition <8Gb
+	t (change type)
+	b (hex code of W95 FAT32)
+	w (write all changes to sd-card)
+
+On the command line:
+
+	mkfs.fat -F 32 -s 8 /dev/sdX1
+	fsck.fat -v /dev/sdX1
+	mount /dev/sdX1 /mnt
+
+For touchscreen firmware:
+
+	cp -r /path/to/touchscreen-firmware/DWIN_SET /mnt
+
+### Mac Users
+
+First, unmount the SDCard.
+
+    sudo diskutil unmountdisk /dev/diskXXX
+
+Then, format it
+
+    sudo newfs_msdos -F 32 -c 8 -v micro /dev/diskXXX
+
+To figure out what your SDCard path is, you can use the following command:
+
+    sudo diskutil list
+
+It'll list all drives attached to your computer. Look for an entry that matches your SDCard size.
+	
+## Steps when you have formatted your SD card
+	
+Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card. Note: Ensure this folder is empty/deleted before you copy the new firmware packages because some files may have been renamed!
+
+Then, follow one of these YouTube videos to complete the flashing process:
+
+https://www.youtube.com/watch?v=Jswzrh2_ekk
+https://www.youtube.com/watch?v=2-Mnin3_1jw
+https://www.youtube.com/watch?v=9jk3lirEfg0
+https://www.youtube.com/watch?v=9jk3lirEfg0
+
+**Be careful that you don't short out the touch screen when flashing it. Ensure the power is not interrupted while flashing.**
+
+
+### What does a successful flash look like?
+
+The flash process is completed when you see "END!", as shown in the image flash_succesful.jpg. Note that there are also several lines below that, each showing the number of files flashed to the display, listed by file suffix (there must be non-zero numbers displayed, as shown in that photo.)
+
+If this is the first time you have flashed the required version of the DGUS OS, then the top line on the screen will name that version of DGUS2 in red text, written over top of white text naming the DGUS version that has been overwritten (upgraded.)
+
+If you flash the display with the same DGUS kernel file that is already installed, the top line will again be in red text, but more easily read, since it will overwrite the same text written in white.
+
+If you flash the firmware without including any kernel upgrade file in the DWIN_SET folder, then the top line will report the currently active version of DGUS on the display, written in white text.
+
+
+After flashing the touch screen has succeeded, you can turn the printer off, and remove the SD card.
+
+If the motherboard was also flashed correctly, after restarting the printer the version will be shown (as shown in flash_succesful2.jpg). Make sure the version number reported matches that of the release of the firmware you downloaded. (e.g. "6.1-Final")
+
+### What does an unsuccessful flash look like
+
+- If you get an orange screen, flashing did **not** succeed.
+
+- If you get a blue screen with END!, but the numbers of the updated files only showing "0", flashing did **not** succeed. Check the examples further down in this document for more information.
+
+- If, after rebooting the printer, a message is shown about "TFT version mismatch" (like in flash_failed2.jpg) then flashing is not successful.
+
+- if, after rebooting the printer, a message is shown about "Firmware flashed incorrectly" then your screen firmware might be flashed but your motherboard ignored the firmware update. You need to re-attempt flashing the motherboard. This sometimes happens on Creality v4.5.2/v4.5.3 boards - reformat your SD card and rename the ".bin" file of the motherboard firmware to something like "today.bin" or "1.bin" and retry.
+
+**NOTE** 
+We have observed with one user that even though the file counts were correct, the firmware still was not flashed correctly.
+
+Some users have also used cards that work sometimes but not other times, which can be very confusing.
+
+If you observe no issues with the firmware flashing but there are still elements missing on the touch screen, please try a different SD card, a smaller SD card and partition etc. 
+
+If the touchscreen looks right after flashing but does not respond when you tap the menu buttons on the screen, then you may have an incompatible combination of firmware, DGUS kernel version and display hardware.  Try flashing again with the other kernel upgrade file.  (Make sure there is only the one kernel file in the DWIN_SET folder.)
+
+## Examples
+
+**dwin-folder-on-sd-card.png** shows how you place the files on your SD card
+
+![Files on your SD card](dwin-folder-on-sd-card.png)
+
+**flashing_in_progress.jpg** shows the indicators that flashing is in progress
+
+![Flashing of touch screen successful](flashing_in_progress.jpg)
+
+**flash_succesful.jpg** shows the indicators that flashing has been successful
+
+![Flashing of touch screen successful](flash_succesful.jpg)
+
+**flash_succesful2.jpg** shows that after flashing the version number of the firmware is shown. If you (for instance) downloaded Community Firmware Release 7 then "CR6Comm-Rel7 Ready" would show.
+
+![Flashing of touch screen successful](flash_succesful2.jpg)
+
+**flash_failed.jpg** shows the indicators that flashing has been unsuccesful
+
+![Flashing of touch screen failed](flash_failed.jpg)
+
+**flash_failed2.jpg** shows that the firmware does not recognize the version of the TFT. The LED near the hotend will also keep flashing on and off.
+
+![Flashing of touch screen failed](flash_failed2.jpg)
+
+## Troubleshooting
+
+Follow the instruction in "What does an unsuccessful flash look like". 
+
+### My touch screen is garbled, pages are shown partially or the screen stops responding
+
+If the screen stops responding or is not displaying properly, try reflashing the firmware using a __different__ SD card.
+
+
+# If you need more help
+
+Check this video tutorial playlist on YouTube: https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr
