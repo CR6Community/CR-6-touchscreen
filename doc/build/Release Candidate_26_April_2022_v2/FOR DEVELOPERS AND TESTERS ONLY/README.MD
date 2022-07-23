@@ -10,8 +10,10 @@ If, however, you wish to re-calibrate your display hardware (e.g. to enable chan
 
 To revert your display from v4.5+ back to v3.5 requires a similar configuration process. 
 What differs is that:
-1. You need to flash the v3.5 kernel upgrade files with the same T5LCFG_Calibrate_Touchscreen.CFG file, at step 0 (or step 3) below.
-2. At step 8, there are only four calibration crosses (in the corners of the screen) and they are not visible on the screen, so you need to touch the corners on the screen, in this order: bottom left, upper left, upper right, bottom right. 
+1. You need to flash the T5LCFG_Calibrate_Touchscreen.CFG file THREE TIMES when configuring v3.5 to calibrate, where twice may suffice when calibrating v4.5.
+2. At step 8, there are only four calibration crosses (in the corners of the screen) and they are not visible on the screen, so you need to touch the corners on the screen on faith, in this order: bottom left, upper left, upper right, bottom right. 
+
+NB: If you try to perform the v3.5 calibration process the first time you flash the Calibration CFG file to the display, it will fail, and tapping on the screen will create a dot in a totally different place.  You must flash the Configuration CFG file twice before trying to calibrate. You must also ensure that the CFG file is the ONLY file in the DWIN_SET folder when you are flashing it. (This is much more obvious, when running the DGUS2 v4.5 calibration routine...)
 
 **Again, @ScratchFury has posted a YouTube video of this process of going from v4.5 to v3.5: https://www.youtube.com/watch?v=g3zH8nUG3eE**
 NOTE: ScratchFury refers to the bottom left corner of the physical screen as "upper left" in his video, because the screen display is rotated and he is refering to the upper left corner of the displayed info screen.
