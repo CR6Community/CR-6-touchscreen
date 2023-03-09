@@ -12,9 +12,9 @@ If your DWIN display is flashed with DGUS2 v4.5 or higher, THIS IS YOUR ONLY OPT
 
 The original June 2021 CF6.1 DWIN_SET will ONLY run on displays using DGUS2 v3.5.  As of approximately December 2021, Creality started shipping displays flashed and calibrated with DGUS2 v4.5.  DGUS2 v4.5 and higher require a different touchscreen calibration than prior DGUS2 versions.  CF6.1 users who flashed those new displays started having one of two serious problems: 
   1. If they flashed the Kernel Upgrade files to their displays, then the push buttons on the main menu did not respond to touch (because the touchscreen was not calibrated for DGUS2 v3.5)
-  2. If the did NOT flash the Kernel Upgrade files (not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY runs on DGUS2 v3.5.
+  2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY runs on DGUS2 v3.5.
 
-That issue left our users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
+That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
 
 ## How Re-Factoring Helps
 
@@ -30,7 +30,7 @@ It will run on ALL versions of DGUS2, regardless of the touchscreen calibration,
 
 ## Downloads
 
-When code is ready for users to experiment with, the Source and zip files are posted as Assets in the Releases section of this repository.
+When code is ready for users to experiment with, the Source and DWIN_SET zip files are posted as Assets in the Releases section of this repository.
 
 * The Zip file with DWIN_SET in the name contains the DWIN_SET folder, README and support files for the current release. 
   Download that file from the latest Release's Assets list.
@@ -57,7 +57,7 @@ If you wish to contribute to the project, please provide your inputs by raising 
 
 ## Credits
 
-[InsanityAutomation](https://github.com/InsanityAutomation/Marlin/tree/CrealityDwin2.0_Bleeding) initiated the refactoring project. It is upon his work that Thinkersbluff has built this Release.
+[InsanityAutomation](https://github.com/InsanityAutomation/Marlin/tree/CrealityDwin2.0_Bleeding) initiated the refactoring project. It is upon that work that Thinkersbluff has built this Release.
 
 [The core CR-6 Community firmware dev team](https://github.com/CR6Community/Marlin#credits) did the heavy-lifting that resulted in the CF6.1 baseline.
 
