@@ -10,8 +10,8 @@ If your DWIN display is flashed with DGUS2 v4.5 or higher, THIS IS YOUR ONLY OPT
 
 ## What Problem Does This Solve?
 
-The original June 2021 CF6.1 DWIN_SET will ONLY run on displays using DGUS2 v3.5.  As of approximately December 2021, Creality started shipping displays flashed and calibrated with DGUS2 v4.5.  DGUS2 v4.5 and higher require a different touchscreen calibration than prior DGUS2 versions.  CF6.1 users who flashed those new displays started having one of two serious problems: 
-  1. If they flashed the Kernel Upgrade files to their displays, then the push buttons on the main menu did not respond to touch (because the touchscreen was not calibrated for DGUS2 v3.5)
+The original June 2021 CF6.1 DWIN_SET will ONLY run on displays using DGUS2 v3.5.  As of approximately December 2021, Creality started shipping displays flashed and calibrated with DGUS2 v4.5.  DGUS2 v4.5 and higher require a different touchscreen calibration than prior DGUS2 versions.  CF6.1 users who flashed those new displays started having one of two serious problems:   
+  1. If they flashed the Kernel Upgrade files to their displays, then the push buttons on the main menu did not respond to touch (because the touchscreen was not calibrated for DGUS2 v3.5)  
   2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY runs on DGUS2 v3.5.
 
 That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
@@ -43,8 +43,8 @@ When code is ready for users to experiment with, the Source and DWIN_SET zip fil
 2. Extract all contents from that .zip file into a new blank directory
 3. Find and read ALL of the README files BEFORE attempting to flash your display (You'll be glad you did!)
 4. Figure-out which DGUS 2 is presently running on your display (as explained above)
-5. DO NOT FLASH ANY KERNEL FILES TO YOUR DISPLAY, unless:
-  5.1 You have inadvertently "bricked" your display by flashing the DGUS2 kernel upgrade files to a display calibrated for DGUS2 v4.5+
+5. DO NOT FLASH ANY KERNEL FILES TO YOUR DISPLAY, unless:  
+  5.1 You have inadvertently "bricked" your display by flashing the DGUS2 kernel upgrade files to a display calibrated for DGUS2 v4.5+  
   5.2 Your display is running version 1.x of DGUS2, and you want to fix the text kerning (in which case, add the DGUS2 v3.5 kernel file to your DWIN_SET.)
 6. Verify that you have satisfied all of the Pre-Requisites for flashing this firmware (Which you will know after reading the README files...)
 7. Flash your display with the DWIN_SET folder 
