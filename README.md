@@ -4,7 +4,7 @@
 
 **The June 2021 release of the CF6.1 Touchscreen firmware remains valid for use on all CR6 printers currently already running and calibrated for DGUS2 v3.5.**
 
-*If you have [a BTT SKR board with the BTT TFT](https://damsteen.nl/blog/2020/11/25/how-to-btt-skr-cr6-installation) you do not need this firmware. This firmware is only for when you use the stock Creality LCD with the stock or BTT motherboard.*
+*If you have [a BTT SKR board with the BTT TFT](https://damsteen.nl/blog/2020/11/25/how-to-btt-skr-cr6-installation) you do not need this firmware. This firmware is only for when you use the stock Creality DWIN TFT display with the stock or BTT motherboard.*
 
 If your DWIN display is flashed with DGUS2 v4.5 or higher, THIS IS YOUR ONLY OPTION for running CF6.1 on your CR6 printer (unless you wish to recalibrate your touchscreen to work with DGUS2 v3.5...  See the README in the folder containing the DGUS2 Kernel files.)
 
