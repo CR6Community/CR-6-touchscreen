@@ -92,8 +92,9 @@ You can flash this re-factored version of the CF6.1 UI to your display and resto
 ### If you flashed the CF6.1 firmware and the DGUS v3.5 kernel upgrade files to a DWIN display that was previously configured to run on DGUS2 v4.5 and just want to revert to stock, rather than flashing this firmware release
 
 1. Copy the T5L_UI_DGUS2_V45_20220105.BIN kernel upgrade file into the Creality DWIN_SET folder. 
-2. Re-flash that DWIN_SET to your display. 
-3. Re-flash the stock Creality firmware to the motherboard
+2. Important: Verify that the Creality DWIN_SET folder includes their T5L...CFG file
+3. Re-flash that Creality DWIN_SET to your display. 
+4. Re-flash the stock Creality DWIN_SET firmware to the motherboard
 
 The printer will now have been reverted to the Creality stock firmware.
 
