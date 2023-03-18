@@ -1,18 +1,20 @@
-‌# Summary​
+# Contents
 
-## Welcome!
+### Welcome!
 
-* [Introduction](docs/Welcome.MD)    
+* [Introduction](docs/docs/Welcome.MD)
 
-## Release Notes
-* [Release Notes](docs/Release_Notes.MD) 
-* [Known Issues](docs/KNOWN_ISSUES.MD) 
+### Release Notes
 
-## Installation Guidelines
+* [Release Notes](docs/docs/Release\_Notes.MD)
+* [Known Issues](docs/docs/KNOWN\_ISSUES.MD)
 
-* [SD Card Formatting Instructions](docs/Detailed_SD_Card_Formatting_Instructions.MD)  
-* [Flashing Help](docs/Flashing_Help.MD)
-* [DGUS Kernel FIles](docs/DGUS_Kernel_Files.MD)
-   
-## Development Guidelines
-* [How-To Development Guidelines](docs/Development_Guidelines_-_WIP/How-To_Development_Information.MD)   
+### Installation Guidelines
+
+* [SD Card Formatting Instructions](docs/docs/Detailed\_SD\_Card\_Formatting\_Instructions.MD)
+* [Flashing Help](docs/docs/Flashing\_Help.MD)
+* [DGUS Kernel FIles](docs/docs/DGUS\_Kernel\_Files.MD)
+
+### Development Guidelines
+
+* [How-To Development Guidelines](docs/docs/Development\_Guidelines\_-\_WIP/How-To\_Development\_Information.MD)
