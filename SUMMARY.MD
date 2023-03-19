@@ -2,6 +2,8 @@
 
 ## Introduction
 * [Welcome!](docs/Welcome.MD)
+
+## Overview
 * [Re-Factored CR-6 Touchscreen firmware](README.md)
 
 ## Installation Guidelines
