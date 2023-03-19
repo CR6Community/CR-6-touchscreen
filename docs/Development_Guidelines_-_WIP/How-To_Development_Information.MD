@@ -40,7 +40,7 @@ You need to have Powershell Core installed (pwsh).
 
 ### Images / screen images sources
 
-You can find the source files where the screen bitmaps are generated from in the [`src\images_src`](src\images_src) folder.
+You can find the source files where the screen bitmaps are generated from in the [`/src/DWIN/DWIN_SOURCEimages_src`](./src/DWIN/DWIN_SOURCEimages_src) folder.
 
 To update the BMP of a screen put the **generated BMP file you made with your image editor** in the [`src\DWIN\DWIN_SOURCE`](src\DWIN\DWIN_SOURCE) folder. 
 
@@ -50,7 +50,7 @@ It will be picked up automatically by the build process of DWIN when saving or g
 
 Next, re-generate the `23_Screen.icl` ICL file are follows:
 
-![Update ICL file](doc/update-screen-icl.gif)
+![Update ICL file](images/update-screen-icl.gif)
 
 Things worthy of note:
 
@@ -66,7 +66,7 @@ For icon ICL generation the process is the same, except that you pick the icons 
 
 DWIN uses a specific set-up of the flash space as described in the manual - as shown below.
 
-![DWIN flash space](doc/flash-space.png)
+![DWIN flash space](images/flash-space.png)
 
 Essentially what it boils down to:
 
@@ -80,13 +80,13 @@ So with the above in mind one must take care to make sure files do not overlap. 
 
 During build a script will run to make sure no sectors have been overallocated. You can also run this script manually.
 
-![DWIN sector allocation check script](doc/sector-allocation-check.png)
+![DWIN sector allocation check script](imaages/sector-allocation-check.png)
 
 ### How buttons are handled with code
 
 In the currently - cleaned up - source code of the touch screen handling in Marlin, the events of the touch screen are handled as described below. This may change in the future. This picture says it all:
 
-![DWIN button-code correlation](doc/button_type.png)
+![DWIN button-code correlation](images/button_type.png)
 
 For buttons:
 
@@ -115,20 +115,20 @@ If you like to see how the touch screen code is handled in the Creality firmware
 
 ### Touch screen configuration
 
-The touch screen configuration file "T5LCFG_272480.CFG" has its specification describer in [T5L_DGUSII Application Development Guide20200902.pdf](./doc/vendor/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!). The DWIN editor also has a way to edit this file. Many parameters can also be set at runtime.
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification described in [T5L_DGUSII Application Development Guide20200902.pdf](vendor_docs/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!). The DWIN editor also has a way to edit this file. Many parameters can also be set at runtime.
 
 ### Fonts
 
 Font's are currently configured like below:
 
-![Font Settings](doc/font-settings.png)
+![Font Settings](images/font-settings.png)
 
 In the same folder where you have the DWIN tool unpacked a `0_DWIN_ASC.HZK` file is placed. You need to copy that to the DWIN_SET folder, and can flash it directly.
 The kerning of the current font is not ideal (especially using numbers that are small, like "1"), so perhaps we should look for a replacement.
 
 ### Other documentation
 
-Vendor documentation is mirrored to the [doc/vendor](doc/vendor) folder.
+Vendor documentation is mirrored to the [vendor_docs](vendor_docs) folder.
 
 In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusResources/tree/creality-ender-5-plus/projects).
 
