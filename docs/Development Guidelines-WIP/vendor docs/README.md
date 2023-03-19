@@ -6,10 +6,10 @@ Secondary resource should be [T5L translated docs.docx](T5L%20translated%20docs.
 
 Outdated documents but on some points relevant:
 
-- [T5UID1 Application Guide.pdf](./T5UID1%20Application%20Guide.pdf)
-- [EN_Dwin DGUS Screen Development Guide 2016.12.19.pdf](./EN_Dwin%20DGUS%20Screen%20Development%20Guide%202016.12.19.pdf) (machine translated)
+- [T5UID1 Application Guide.pdf](T5UID1%20Application%20Guide.pdf)
+- [EN_Dwin DGUS Screen Development Guide 2016.12.19.pdf](EN_Dwin%20DGUS%20Screen%20Development%20Guide%202016.12.19.pdf) (machine translated)
 - [EN_DWIN DGUS Display Development Guide_V4.3.pdf](EN_DWIN%20DGUS%20Display%20Development%20Guide_V4.3.pdf)
-- [EN_DGUS V5.10 User Guide.pdf](./EN_DGUS%20V5.10%20User%20Guide.pdf)
+- [EN_DGUS V5.10 User Guide.pdf](EN_DGUS%20V5.10%20User%20Guide.pdf)
 
 ## Further downloads
 
