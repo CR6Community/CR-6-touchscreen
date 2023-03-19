@@ -1,7 +1,7 @@
 # Flashing Help For Re-Factored DWIN_SET Version 1.1
 **NOTE: If you have already successfully flashed your system by following the instructions in the README.MD file, then you do not need to read this file.**
 
-**These instructions are offered for use by those who were not able to succeed at flashing this DWIN_SET to their display by following the README.**
+**These instructions are offered for use by those who were not able to succeed at flashing this DWIN_SET to their display by following the instructions in [the repo README](../README.md).**
 
 ## Begin wih the End in Mind - _Steve Covey, The 7 Habits of Highly Effective People_
 

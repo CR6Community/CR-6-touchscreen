@@ -115,7 +115,7 @@ If you like to see how the touch screen code is handled in the Creality firmware
 
 ### Touch screen configuration
 
-The touch screen configuration file "T5LCFG_272480.CFG" has its specification described in [T5L_DGUSII Application Development Guide20200902.pdf](vendor_docs/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!). The DWIN editor also has a way to edit this file. Many parameters can also be set at runtime.
+The touch screen configuration file "T5LCFG_272480.CFG" has its specification described in [T5L_DGUSII Application Development Guide20200902.pdf](vendor%20docs/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf) chapter 4. You can use an editor like HxD to explore and edit it (with caution!). The DWIN editor also has a way to edit this file. Many parameters can also be set at runtime.
 
 ### Fonts
 
@@ -128,7 +128,7 @@ The kerning of the current font is not ideal (especially using numbers that are 
 
 ### Other documentation
 
-Vendor documentation is mirrored to the [vendor_docs](vendor_docs) folder.
+Vendor documentation is mirrored to the [vendor docs](vendor%20docs) folder.
 
 In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusResources/tree/creality-ender-5-plus/projects).
 

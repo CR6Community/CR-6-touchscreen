@@ -7,14 +7,14 @@
 * [Re-Factored CR-6 Touchscreen firmware](README.md)
 
 ## Installation Guidelines
-* [DGUS Kernel Files](docs/DGUS\_Kernel\_Files.MD)
-* [Detailed SD card formatting instructions](docs/Detailed\_SD\_Card\_Formatting\_Instructions.MD)
-* [Flashing Help](docs/Flashing\_Help.MD)
+* [DGUS Kernel Files](docs/DGUS%20Kernel%20Files.MD)
+* [Detailed SD card formatting instructions](docs/Detailed%20SD%20Card%20Formatting%20Instructions.MD)
+* [Flashing Help](docs/Flashing%20Help.MD)
 
 ## Release Notes
-* [Release Notes](docs/Release\_Notes.MD)
-* [KNOWN ISSUES](docs/KNOWN\_ISSUES.MD)
+* [Release Notes](docs/Release%20Notes.MD)
+* [KNOWN ISSUES](docs/KNOWN%20ISSUES.MD)
 
 ## Development Guidelines
-* [How-To Development Information](docs/Development\_Guidelines\_-\_WIP/How-To\_Development\_Information.MD)
-* [DGUS DWIN scavenged documentation](docs/Development\_Guidelines\_-\_WIP/vendor\_docs/README.md)
+* [How-To Development Information](docs/Development%20Guidelines-WIP/How-To%20Development%20Information.MD)
+* [DGUS DWIN scavenged documentation](docs/Development%20Guidelines-WIP/vendor%20docs/README.md)

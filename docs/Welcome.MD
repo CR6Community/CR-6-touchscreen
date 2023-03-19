@@ -13,9 +13,9 @@ NOTE: This DWIN_SET is NOT compatible with the AnyCubic Vyper display.
 
 ## Installation Guidelines
 This DWIN_SET must be flashed to the DWIN TFT display, from an SD card.
-- The SD card must be prepared as documented in Detailed SD Card Formatting Instructions.MD
-- A high-level set of installation instructions is included in Release Notes.MD
-- Detailed Instructions and Examples for preparing-for, performing and troubleshooting problems with the flashing process are documented in Flashing Help.MD
+- The SD card must be prepared as documented in [Detailed SD Card Formatting Instructions.MD](Detailed%20SD%20Card%20Formatting%20Instructions.MD)
+- A high-level set of installation instructions is included in [the repo README](../README.md)
+- Detailed Instructions and Examples for preparing-for, performing and troubleshooting problems with the flashing process are documented in [Flashing Help.MD](Flashing_Help.MD)
 
 ## Help For Users Who Have Problems With or After Flashing Their Display
 Some users will have difficulty flashing this firmware to their display.
@@ -25,10 +25,10 @@ Some users will have flashed their touchscreens with a different version of DGUS
 - DGUS2 Kernel files are provided, with instructions, to support users who wish to flash their screen back to a compatible version of DGUS2.
 
 ## Release Notes
-A brief summary of the differences between this release and the CF6.1 release is documented in Release Notes.MD
+A brief summary of the differences between this release and the CF6.1 release is documented in [Release Notes.MD](Release%20Notes.MD)
 
 ## Known Issues
-A brief overview of known issues with this release is documented in Known Issues.MD
+A brief overview of known issues with this release is documented in [Known Issues.MD](KNOWN%20ISSUES.MD)
 
 ## Reverting to Stock Creality Firmware
 Guidelines for reverting a CR6 printer from CR6Community Firmware back to Creality stock firmware are included in Release Notes.MD
