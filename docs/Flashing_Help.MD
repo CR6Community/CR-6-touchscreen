@@ -89,7 +89,9 @@ If the touchscreen looks right after flashing but does not respond when you tap 
 
 **NB: This section assumes that you have already flashed CF6.1 to the Motherboard, BEFORE you try to flash the Re-Factored DWIN_SET to the display.  If instead you choose to flash the motherboard AFTER flashing the display, you will NOT see "CR6Comm-Rel6.1 Final Ready." after flashing the display, until you have also flashed the motherboard. You will instead likely see the splash screen message with the "bootloader seems confused" message. In that event, just proceed with flashing the motherboard.**
 
-**All of these images also assume that you have DGUS2v3.5 installed on your system and that you do not need to flash DGUS2 v4.5. If in fact you do and should have DGUS2 v4.5 installed, there will be one additional status line on the blue flash END! screen for CRC32 Check, which you can ignore** as shown here:
+**The blue screen displays differ between DGUS2v3.5 and DGUS2v4.5.**
+
+**If you have DGUS2 v4.5 installed, there will be one additional status line on the blue flash END! screen for CRC32 Check, which you can ignore**, as shown here:
 
 ![CRC32 Check: 000 Appears only with DGUS2v4.5](Sample%20Screen%20Images/Empty%20DWIN_SET%20Flash.jpg)
 
@@ -120,21 +122,33 @@ Copy the DWIN_SET folder as-is, from the ZIP file to a blank SD card.
 
 ![Default DWIN_SET folder on SD Card](Sample%20Screen%20Images/dwin-folder-on-sd-card.png)
 
-If you successfully flash all of the DWIN_SET files at once, to a screen loaded with DGUS2v3.5, the display will look like the example in **flash_successful.jpg**
-![Flashing of touch screen successful](Sample%20Screen%20Images/flash_succesful%20-%20DGUS2%20v3.5.JPG)
+**On DGUS2 v3.5:** If you successfully flash all of the DWIN_SET files at once, the display will look like this:
+![Flashing of touch screen successful](Sample%20Screen%20Images/Full%20flash_succesful%20-%20DGUS2%20v3.5.JPG)
 
-If you have DGUS2 v4.5 or higher loaded, there will be one additional status line at the bottom of that list, reporting the status of a CHECKSUM function, which is not used by these displays. You can ignore that info.
+**On DGUS2v4.5:** Any time you flash a set of files that includes the T5L...CFG file, the process ends in a colourful screen of noise, like this:
+![Colourful screen of noise](Sample%20Screen%20Images/WhiteNoiseScreen.JPG)
 
-#### Option 2, Part 1 of 2: Flash the CFG and HZK Files Separately, First
+If this bothers you, you may prefer to follow Option 2 to flash your screen...
+
+#### Option 2, Part 1 of 3: Flash the CFG File Separately, First
  The CFG file configures your display. It is critical that the flashing of that particular file NOT be interrupted, since an incomplete flash may brick your display. You only need to flash it once, so you may want to _flash it by itself, before flashing anything else.
 
  Create an empty DWIN_SET folder alone on the SD card, and copy just the CFG file into that. It should look like this:_
 
 ![Optionally - Flash T5LCFG_272480K.CFG by itself](Sample%20Screen%20Images/dwin-folder-on-sd-card_one-time-Flash-of-CFG-file.png)
 
-With power OFF, insert that card into the display and power ON to flash it.  If flashing just the CFG file is successful, the screen will show this, pretty quickly:
+With power OFF, insert that card into the display and power ON to flash it.  
 
-![Successful Flash of CFG file only](Sample%20Screen%20Images/flash_successful%20-%20CFG%20Only.jpg)
+**On DGUS2 v3.5** - If flashing just the CFG file is successful, the screen will show this, pretty quickly:
+
+![Successful Flash of CFG file only](Sample%20Screen%20Images/flash_successful%20-%20CFG%20Only-DGUS2v3.5.jpg)
+
+**On DGUS2 v4.5** - For some reason, this step ends in this colourful noise screen, whenever you flash the CFG file:
+![Colourful Noise screen](Sample%20Screen%20Images/WhiteNoiseScreen.JPG)
+
+You might see the usual blue screen display briefly before this noise replaces it.  If you remove the CFG file and flash again, you will see the proper blue screen display (though it will show 000 for Configuration Files flashed, of course.)
+
+#### Option 2, Part 2 of 3: Flash the HZK File Separately, Second
 
 Flashing the HZK file loads the font data. It is a large file, so it takes a long time to flash.  Since the HZK file only needs to be flashed once, and since you may need to flash your display several times with other files, you may prefer to remove the HZK file from the default DWIN_SET folder and flash it once, by itself, after flashing the T5L file and before flashing everything else.
 
@@ -142,18 +156,29 @@ As above, create an empty DWIN_SET folder alone on the card.  Copy the HZK file 
 
 ![The HZK file flashed alone in DWIN_SET](Sample%20Screen%20Images/dwin-folder-on-sd-card_one-time-Flash-of-HZK-file.png)
 
-With power OFF, insert that card into the display and power ON to flash it.  If flashing just the HZK file is successful, the screen will show this afer a minute or two:
+With power OFF, insert that card into the display and power ON to flash it.  
 
-![Successful Flash of HZK file only](Sample%20Screen%20Images/flash_successful%20-%20HZK%20Only.JPG)
+**On DGUS2v3.5:** If flashing just the HZK file is successful, the screen will show this afer a minute or two:
+![DGUS2v3.5-Flash HZK File Only successful](Sample%20Screen%20Images/flash_successful%20-%20HZK%20Only-DGUS2v3.5.JPG)
 
-#### Option 2, Part 2: Flash the rest of the files
+**On DGUS2 v4.5:** If flashing just the HZK file is successful, the screen will show this afer a minute or two:
+
+![Successful Flash of HZK file only](Sample%20Screen%20Images/flash_successful%20-%20HZK%20Only-DGUS2v4.5.JPG)
+
+#### Option 2, Part 3 of 3: Flash the rest of the files
 Once the CFG and HZK files have been flashed, you can remove those two files from the default DWIN_SET folder that you copy to your SD card.  The resulting card should look like this:  
 
 ![Default DWIN_SET without the CFG and HZK files in it](Sample%20Screen%20Images/dwin-folder-on-sd-card-after-one-time-Files-Flashed.png)
 
-With power OFF, insert that card into the display and power ON to flash it.  If flashing just the HZK file is successful, the screen will show this afer a minute or two:
+**NOTE: DWIN_SET as distributed in the zip file also contains a large collection of .bmp files.  You can either delete or ignore all of those.  They are there for the convenience of developers only and are ignored by the display bootloader.**
 
-![All remaining files successfully flashed at once](Sample%20Screen%20Images/Remainder%20flash_successful%20-%20DGUS2%20v3.5%20-.JPG)
+With power OFF, insert that card into the display and power ON to flash it.  
+
+**On DGUS2 v3.5:** If flashing is successful, the screen will show this afer a minute or two:
+![All remaining files successfully flashed at once](Sample%20Screen%20Images/Remainder%20flash_successful%20-%20DGUS2%20v3.5.JPG)
+
+**On DGUS2 v4.5:** If flashing is successful, the screen will show this afer a minute or two:
+![Alt text](Sample%20Screen%20Images/Remainder%20flash_successful%20-%20DGUS2%20v4.5.JPG)
 
 **NOTE** You can also choose to flash any combination of the above files alone or in combination.  The display will only work correctly after all of the files have been successfully flashed to it.
 
@@ -257,4 +282,4 @@ _When all else fails, try a different SD card_
 
 # If you need more help
 
-Check this video tutorial playlist on YouTube: https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5m 
+Check this video tutorial playlist on YouTube:[ https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5m ](https://www.youtube.com/playlist?list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr)
