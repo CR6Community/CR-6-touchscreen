@@ -14,10 +14,11 @@ When you have successfully achieved that goal, your screen will look like this:
 
 - Always Start this process a BLANK SD Card, when copying a new DWIN_SET folder and/or contents to the SD Card!
 - ALWAYS Power-Off the printer, before removing or installing a card from the display!
-- Be VERY careful that you don't short out the touch screen when flashing it. Ensure the power is not interrupted while flashing. 
+- Be VERY careful that you don't short out the touch screen when flashing it.
+- Ensure the power is not interrupted while flashing. 
 - Seriously consider installing a micro-SD to SD card extension cable, permanently plugged into the display micro SD card slot
   - This minimizes the stress on what may be a very delicate card slot
-  - It also eliminates the need to remove the back cover (and the serial interface harness), which speeds up the process considerably and elimiates the potential risk of damage to the PCB
+  - It also eliminates the need to remove the back cover (and the serial interface harness), which speeds up the process considerably and eliminates the potential risk of damaging the PCB while the back cover is off.
 
 ## Step 1: Prepare a Blank Micro SD card
 Partition and format a micro SD card, per [the detailed SD card formatting instructions](Detailed%20SD%20Card%20Formatting%20Instructions.MD).   
@@ -26,7 +27,10 @@ _Alternatively, if you are using a micro SD to full SD extension cable, you can 
 
 ## After you have partitioned and formatted your SD card:
 ### Extract DWIN_SET to the SD card	
-Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card. Except (perhaps) for the name and disc number, the result will look like this:
+Take the firmware archive and extract the DWIN_SET folder to the SD card, so that the DWIN_SET folder itself is present on the SD card.   
+_Optionally, you can delete all of the bitmap (.bmp) files from DWIN_SET._
+
+Except (perhaps) for the name and disc number, the result will look like this:
 ![Full DWIN_SET extracted to an SD card](Sample%20Screen%20Images/exract-dwin-folder-onto-sd-card.png)
 
 ### Decide whether to use the approach described in Option 1 or in Option 2, below, to Flash the DWIN_SET contents to your display
@@ -283,3 +287,5 @@ _When all else fails, try a different SD card_
 # If you need more help
 
 Check this video tutorial playlist on YouTube:[ https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5m ](https://www.youtube.com/playlist?list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr)
+
+Sometimes, the problem may be how we say things, rather than what we have said.  Maybe we were more clear when we wrote the FAQs?: https://github.com/CR6Community/Marlin/wiki/How-To-Flash-Firmware-to-the-CR6-printer
