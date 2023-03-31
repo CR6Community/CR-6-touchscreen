@@ -279,7 +279,7 @@ SD, SDHC and SDXC cards will all work with the display, but:
  - the first partition **must** be a Primary Partition, formatted FAT32 with an allocation unit size of 4096 sectors.  To achieve that FAT32 format with an SDHC or SDXC card, the first Primary Partition must be sized <16GB. (NOTE: 16Gb is actually the threshold value. You may need to size your partition to 15Gb, to be able to select 4096 as your option in the PC OS.)
  - the display does seem to favour the older technology cards.XC cards in particular may not always work with it.
 
- This YouTube video explains and demonstrates how to prepare SDHC or SDXC cards: https://youtu.be/CEvQpMpNxbY
+ This YouTube video explains and demonstrates how to prepare SDHC or SDXC cards: [https://youtu.be/CEvQpMpNxbY](https://youtu.be/CEvQpMpNxbY)
  
 _When all else fails, try a different SD card_
 
@@ -288,4 +288,4 @@ _When all else fails, try a different SD card_
 
 Check this video tutorial playlist on YouTube:[ https://www.youtube.com/watch?v=Q6738aiEKkU&list=PLfDSKnF0RNcYDkxM5m ](https://www.youtube.com/playlist?list=PLfDSKnF0RNcYDkxM5mYtyuvlTfMAMD-Nr)
 
-Sometimes, the problem may be how we say things, rather than what we have said.  Maybe we were more clear when we wrote the FAQs?: https://github.com/CR6Community/Marlin/wiki/How-To-Flash-Firmware-to-the-CR6-printer
+Sometimes, the problem may be how we say things, rather than what we have said.  Maybe we were more clear when we wrote the FAQs?: [https://github.com/CR6Community/Marlin/wiki/How-To-Flash-Firmware-to-the-CR6-printer](https://github.com/CR6Community/Marlin/wiki/How-To-Flash-Firmware-to-the-CR6-printer)
