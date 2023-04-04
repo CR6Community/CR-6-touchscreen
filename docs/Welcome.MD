@@ -22,7 +22,7 @@ Some users will have difficulty flashing this firmware to their display.
  - e.g.: The display bootloader may not read their SD card correctly
 Troubleshooting advice is included in [Flashing Help.MD](Flashing%20Help.MD)
 Some users will have flashed their touchscreens with a different version of DGUS2 than the one for which their display was calibrated.  Those users will find that although the main menu screen is correctly displayed after flashing this firmware, the buttons will not work if tapped, as if their touchscreen is "frozen".
-- DGUS2 Kernel files are provided, with instructions, to support users who wish to flash their screen back to a compatible version of DGUS2.
+- DGUS2 Kernel files are provided, with [instructions](DGUS%20Kernel%20Files.MD), to support users who wish to flash their screen back to a compatible version of DGUS2.
 
 ## Release Notes
 A brief summary of the differences between this release and the CF6.1 release is documented in [Release Notes.MD](Release%20Notes.MD)
@@ -31,8 +31,8 @@ A brief summary of the differences between this release and the CF6.1 release is
 A brief overview of known issues with this release is documented in [Known Issues.MD](KNOWN%20ISSUES.MD)
 
 ## Reverting to Stock Creality Firmware
-Guidelines for reverting a CR6 printer from CR6Community Firmware back to Creality stock firmware are included in [Release Notes.MD](Release%20Notes.MD)
-**NOTE: Those guidelines are offered in good faith, but we obviously can not guarantee that those instructions will work, since we can not be sure what (if any) changes Creality have made or will make to their systems.
+Guidelines for reverting a CR6 printer from CR6Community Firmware back to Creality stock firmware are included in [Release Notes.MD](Release%20Notes.MD)  
+**NOTE: Those guidelines are offered in good faith, but we obviously can not guarantee that those instructions will work, since we can not be sure what (if any) changes Creality have made or will make to their systems.**
 
 ## License
 The CR6Community CR-6-touchscreen firmware is licensed under the GNU General Public License (GPL) v3.0
