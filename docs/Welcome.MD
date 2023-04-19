@@ -1,5 +1,5 @@
 # Welcome!
-This is the documentation for the latest release of the CR6Community DWIN_SET application - Re-Factored version 1.1, released 13 March 2023.
+This is the documentation for the latest release of [the CR6Community DWIN_SET application - Re-Factored version 1.1, released 13 March 2023.](https://github.com/CR6Community/CR-6-touchscreen/releases/tag/Re-Factored_v1.1)
 
 ## Application
 This DWIN_SET is compatible with:
