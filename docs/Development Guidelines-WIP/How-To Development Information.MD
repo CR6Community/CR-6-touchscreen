@@ -22,7 +22,9 @@ This document is organized into the following sections:**
 - **The DGUSTool Suite** - the structure of the tool and an overview of its components  
 
 - 
-  **Making Modifications**
+  **Modifying an Existing Project**
+  - **Opening a Project** - a quick-start guide for opening an existing project
+  - **Browsing a Project** - a quick-start guide for using the DGUSTool to browse the existing application
   - **Building ICL files** - an explanation of how to use the DGUSTool to generate - from the src files - the compressed graphics (ICL) files which are flashed to the display.
   - **Building DWIN_SET** - a brief outline of the workflow by which one generates a new version of the DWIN_SET for the CR6Community Firmware.
   - **Adding New Features** - a discussion of how one might go about extending or modifying this UI, going-forward.
@@ -50,7 +52,9 @@ You will see a screen similar to this one, when the tool has launched:
 ![DGUSTool Homescreen](Images/dgus2util_home.png)
 
 
-## How to Make Modifications
+## How to Modify an Existing Project
+_**NOTE:** Describing how to create a new project from "scratch" is beyond the scope of this document. With a little experience, however, one should be able to understand how to at least port another existing DWIN display project to work with the CR6 stock display._
+
 ### Open the Project in the DGUSTool
 If you have not already done so, clone the [CR6Community Firmware Touchscreen GitHub repository](https://github.com/CR6Community/CR-6-touchscreen) to your local drive.
 
@@ -78,6 +82,7 @@ IF this is the first time you are opening the project:
  
 
 If your screen matches the above example, you now have the project open in the DGUSTool.
+
 ### Browsing the Existing Application
 **NOTE:** A complete discussion of the DGUSTool interface is beyond the scope of this document.  The following information is "just enough" to be able to perform the basic tasks described below. A little experimentation with the various controls can help improve the overall efficiency and effectiveness of your workflows with this tool.
 #### Left Side Window
@@ -126,19 +131,25 @@ TBA
 TBA
 ### Modifying the Variables
 TBA
-### Building ICL Files
+### Building the ICL Files
 TBA
 ### Building DWIN_SET
 TBA
 ### "Rolling Your Own"
-#### Translations / localization 
+#### Porting another DWIN_SET application to the CR6
+TBA
+#### Changing the Language of the User Interface
+The stock CR6 printer DWIN_SET firmware from Creality is available in either Chinese/English or 9-Language versions.
 
-Internationalization support in DGUS DWIN is very cumbersome. 
-- The text on the background bitmaps for each screen, each button, and each icon is embedded in the bitmaps. To translate and have it first-class, you would need to duplicate all the bmps, give each version of each bitmap a separate ID, and keep track of that mapping in firmware, which is a lot of work. The volunteers in the development team have no capacity to maintain localizations that way.
+The CR6Community Touchscreen Firmware only supports English-language displays and controls.
 
-If you want to translate the English-only user interface into your own language, you instead have the option of forking this repository and building maintaining your own version of the touch screen firmware.
+The author of this document does not know how Creality has implemented multiple languages, but the CR6 Touchscreen design relies upon text written directly into the background bitmaps for each screen and directly into the graphical icons used for buttons and toggles.
 
-The complete workflow could look like this:
+Changing the basic design of the CR6Community Firmware to support multiple languages is far too laborious for the Community volunteers to undertake.
+
+If you want to translate the English-only user interface into your own language, you are welcome to fork this repository and build/maintain your own version of the CR6Community Touchscreen firmware.
+
+Your workflow might look like this:
 
 1. Fork this repository.
 2. Work on the extui branch (this is the branch for all work going forward)
