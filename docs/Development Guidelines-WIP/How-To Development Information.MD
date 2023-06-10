@@ -54,8 +54,10 @@ You will see a screen similar to this one, when the tool has launched:
 
 ## How to Modify an Existing Project
 _**NOTE:** Describing how to create a new project from "scratch" is beyond the scope of this document. With a little experience, however, one should be able to understand how to at least port another existing DWIN display project to work with the CR6 stock display._
+<details>
 
 ### Open the Project in the DGUSTool
+<details>
 If you have not already done so, clone the [CR6Community Firmware Touchscreen GitHub repository](https://github.com/CR6Community/CR-6-touchscreen) to your local drive.
 
 Open the DGUSTool 8.2.1.14.
@@ -82,9 +84,13 @@ IF this is the first time you are opening the project:
  
 
 If your screen matches the above example, you now have the project open in the DGUSTool.
+</details>
 
-### Browsing the Existing Application
+### Browse the Existing Application
 **NOTE:** A complete discussion of the DGUSTool interface is beyond the scope of this document.  The following information is "just enough" to be able to perform the basic tasks described below. A little experimentation with the various controls can help improve the overall efficiency and effectiveness of your workflows with this tool.
+
+<details>
+
 #### Left Side Window
 The left side window of the DGUSTool Application allows you to browse through the menu screens and the controls.
 ![DGUS II interface](Images/dgus2util_lsw.png)
@@ -120,6 +126,8 @@ One must select the Images view in the left side window, to select a different p
 
 ![DGUS II interface](Images/dgus2util_mw_tabs.png) 
 
+</details>
+
 ### Modifying Existing Features
 TBA
 ### Adding New Features
@@ -136,9 +144,12 @@ TBA
 ### Building DWIN_SET
 TBA
 ### "Rolling Your Own"
+<details>
+
 #### Porting another DWIN_SET application to the CR6
 TBA
 #### Changing the Language of the User Interface
+ <details>
 The stock CR6 printer DWIN_SET firmware from Creality is available in either Chinese/English or 9-Language versions.
 
 The CR6Community Touchscreen Firmware only supports English-language displays and controls.
@@ -160,10 +171,15 @@ Your workflow might look like this:
 7. Flash your localized DWIN_SET to your system.
 
 Good luck, and if you maintain your own translated firmware, please let us know!
+ </details>
+</details>
+</detils>
 
 ===================================================
+# Legacy Material
 _**NOTE: Everything below this line is legacy text from previous documentation. It is all under review and revision as part of the effort of completing the above rewrite.**_
 
+<details>
 ### Images / screen images sources
 
 You can find the source files where the screen bitmaps are generated from in the [`/src/DWIN/DWIN_SOURCEimages_src`](./src/DWIN/DWIN_SOURCEimages_src) folder.
@@ -265,3 +281,5 @@ In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusReso
 Icons from [Font Awesome](https://fontawesome.com/) and [Remix Icon](https://remixicon.com/).
 
 Font from [Google Fonts](https://fonts.google.com/specimen/B612) and customized with [FontForge](https://fontforge.org)
+
+</details>
