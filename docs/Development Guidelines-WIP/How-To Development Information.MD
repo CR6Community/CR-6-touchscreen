@@ -12,34 +12,138 @@ The scope of this document is limited to explaining  the structure of the Refact
 _**NOTE**: These instructions are **specific** to the Refactored DWIN_SET.  Previous versions of the UI were generated and maintained using DGUSTool version 8.0.1.1, which operates slightly differently and which generates a DWIN_SET which only operates on DGUS2 v3.5._
 
 ## Document Overview
-This document is organized into the following sections:**
+This document is organized into collapsed sections, to facilitate a rapid scan of the material. The headings provide a high-level overview of the information and a suggested workflow.  Click on the arrow beside the word "details" to expand or collapse each section.
+<details>
 
-- **The Structure**
-  - **Where the files are** - an overview of the source (src) files from which the DWIN_SET is generated
-  - **What the files are** - a brief explanation of the purpose of each type of source file
-  - **Integration with the Motherboard Firmware** - how and why the Touchscreen firmware and the Motherboard firmware are integrated
+This is the document's Table of Contents:
 
-- **The DGUSTool Suite** - the structure of the tool and an overview of its components  
-
-- 
-  **Modifying an Existing Project**
-  - **Opening a Project** - a quick-start guide for opening an existing project
-  - **Browsing a Project** - a quick-start guide for using the DGUSTool to browse the existing application
-  - **Building ICL files** - an explanation of how to use the DGUSTool to generate - from the src files - the compressed graphics (ICL) files which are flashed to the display.
-  - **Building DWIN_SET** - a brief outline of the workflow by which one generates a new version of the DWIN_SET for the CR6Community Firmware.
-  - **Adding New Features** - a discussion of how one might go about extending or modifying this UI, going-forward.
-  - "**Rolling your own**" - how you might fork and customize this UI for you own purposes (e.g. to change the language)
-
-- **Other Helpful Resources**
+- [Introduction](#introduction)
+  - [Purpose](#purpose)
+  - [Scope](#scope)
+  - [Document Overview](#document-overview)
+- [The Refactored CR6 Community Touchscreen Firmware](#the-refactored-cr6-community-touchscreen-firmware)
+  - [The Project File Structure](#the-project-file-structure)
+    - [What the files are](#what-the-files-are)
+      - [One T5L Configuration (CFG) file](#one-t5l-configuration-cfg-file)
+      - [One ICon Library (ICL) file per Subfolder in DWIN\_SOURCE](#one-icon-library-icl-file-per-subfolder-in-dwin_source)
+      - [One DWINOS\_page\_change.bin File](#one-dwinos_page_changebin-file)
+      - [(Optionally) One Base-Font (.HZK) file](#optionally-one-base-font-hzk-file)
+      - [(Optionally) One DGUS2 OS .bin file](#optionally-one-dgus2-os-bin-file)
+    - [Where the files are](#where-the-files-are)
+  - [The DGUSTool Suite](#the-dgustool-suite)
+  - [How to Modify an Existing Project](#how-to-modify-an-existing-project)
+    - [Open the Project in the DGUSTool](#open-the-project-in-the-dgustool)
+    - [Browse the Existing Application](#browse-the-existing-application)
+      - [Left Side Window](#left-side-window)
+      - [Right Side Window](#right-side-window)
+      - [Middle Window](#middle-window)
+    - [Modify Existing Features](#modify-existing-features)
+    - [Add New Features](#add-new-features)
+    - [Modify the Pages](#modify-the-pages)
+    - [Modify the Graphics](#modify-the-graphics)
+    - [Modify the Variables](#modify-the-variables)
+    - [Build the ICL Files](#build-the-icl-files)
+    - [Generate Your New DWIN\_SET](#generate-your-new-dwin_set)
+    - [Flash and Validate Your New DWIN\_SET](#flash-and-validate-your-new-dwin_set)
+    - ["Rolling Your Own"](#rolling-your-own)
+      - [Porting another DWIN\_SET application to the CR6](#porting-another-dwin_set-application-to-the-cr6)
+      - [Changing the Language of the User Interface](#changing-the-language-of-the-user-interface)
+- [Legacy Material](#legacy-material)
+    - [Images / screen images sources](#images--screen-images-sources)
+      - [Updating the touch screen firmware files](#updating-the-touch-screen-firmware-files)
+    - [Flash space](#flash-space)
+    - [How buttons are handled with code](#how-buttons-are-handled-with-code)
+      - [Previous version of the code](#previous-version-of-the-code)
+    - [Touch screen configuration](#touch-screen-configuration)
+    - [Fonts](#fonts)
+    - [Other documentation](#other-documentation)
+  - [Credits](#credits)
+</details>
 
 # The Refactored CR6 Community Touchscreen Firmware
+The history of the CR6Community Touchscreen Firmware is documented in this repository on GitHub: https://github.com/CR6Community/CR-6-touchscreen/tree/extui
 
-## This DGUS Project's File Structure
+The Refactored version was derived from version 6.1, which only runs on DGUS2 v3.5. 
+
+The Refactored version runs on all versions of DGUS2.
+
+## The Project File Structure
+The DGUSTool generates a set of files which must be flashed to the stock Thin-Film Transitor (TFT) Touchscreen display, which is based on the DWIN Technologies T5L ASIC.
+
+The DGUSTools impose some requirements on the project's file types and file structure. Those must be respected. In addition, the file structure of this project is designed to facilitate the author's preferred workflow for working with the DGUSTools. 
+
+<details>
+
+### What the files are
+The  firmware flashed to the CR6 stock touchscreen display must be comprised of a single folder, named "DWIN_SET". 
+
+The files within that folder each have a specific purpose, specific file-naming requirements and specific format requirements, as detailed in this section.
+<details>
+
+#### One T5L Configuration (CFG) file
+**CAUTION: This file can be modified using the DGUSTools, but PLEASE NOTE: you can brick your display if you flash it with a badly formed T5L....CFG file**
+<details>
+
+- **Description:** The T5L....CFG file is configured to modify the state of the DWIN display. 
+- **Source**: 
+  - For running the CR6 Touchscreen Firmware, the file T5LCFG_272480.CFG is included in the DWIN_SET folder. 
+- **File Naming Requirements**:
+  - The first three characters of the filename must be T5L
+  - The file extension must be .CFG
+  - Any other characters in the filename are optional, but may be limited to alphanumeric or specific special characters (e.g: "-", "+" or "_")
+
+</details>
+
+#### One ICon Library (ICL) file per Subfolder in DWIN_SOURCE
+<details>
+
+- **Description**
+  - 23_Screens.icl - contains the screen background graphics.
+  - 32_LoadingBar.icl - contains the sequence of graphics for the firmware loading bar animation, which is used on the Loading screen and on the Print Progress screen.
+  - 42_Toggles.icl - contains the images used to simulate toggle button action on the applicable menus (e.g. The FAN ON & FAN OFF buttons are each made from one of these images. One replaces the other, when the button is activated)
+  - 45_Icons.icl - Similar to 42_Toggles, but simulating momentary action buttons (e.g. The Run PID button is made from one of these images.)
+  - 50_Animations.icl - contains the graphics from which the "throbber" animation is generated.
+- **Source**: These files must be generated by the author of the DWIN_SET firmware, using the DGUSTool.  There must be one .icl file for each of the subfolders in the DWIN_SOURCE folder:
+  - 23_Screens.icl
+  - 32_LoadingBar.icl
+  - 42_Toggles.icl
+  - 45_Icons.icl
+  - 50_Animations.icl
+- **File Naming Requirements**: 
+  - The first two characters of the icl filename specifies the starting memory location into which the graphics will be loaded by the bootloader routine, when flashing the display. 
+  - The .icl extension is required, to identify the file type to the bootloader routine.  
+  - The rest of the filename is intended to help users recognize what they are dealing with. 
+  - NOTE: If desired, these names can be truncated to XX.icl, where XX is the first two digits of their current name.
+- **Optional**: No.  
+  - All of the .icl files must be flashed at least once, for the UI to function correctly. They can, however, be flashed one at a time, or in arbitrary groupings, if desired.
+  - Any modifications made to the graphics in a DWIN_SOURCE subfolder requires the creation and flashing of a new ICL file for the contents of that folder.
+  </details>
+
+#### One DWINOS_page_change.bin File
+
+<details>
+
+- **Description:** The purpose of this file is not known to the author of this document.
+- **Source**: This file is automatically generated by the DGUSTool application "Generate" command.
+- **File Naming Requirements**: Do not move or rename this file
+- **Optional**: Unknown
+
+</details>
+
+#### (Optionally) One Base-Font (.HZK) file
+TBA
+#### (Optionally) One DGUS2 OS .bin file
+TBA
+
+</details>
+
+### Where the files are
 TBA
 
 ## The DGUSTool Suite
 
 You will need [the DGUS v8.2.1.14.x software](https://github.com/CR6Community/CR-6-touchscreen/tree/extui/Tools) for editing the DWIN_SET touchscreen functionality. 
+<details>
 
 e.g.: 
 - Follow the above link
@@ -51,7 +155,8 @@ You will see a screen similar to this one, when the tool has launched:
 
 ![DGUSTool Homescreen](Images/dgus2util_home.png)
 
-
+</details>
+</details>
 ## How to Modify an Existing Project
 _**NOTE:** Describing how to create a new project from "scratch" is beyond the scope of this document. With a little experience, however, one should be able to understand how to at least port another existing DWIN display project to work with the CR6 stock display._
 <details>
