@@ -281,7 +281,7 @@ Your workflow might look like this:
 Good luck, and if you maintain your own translated firmware, please let us know!
  </details>
 </details>
-</detils>
+</details>
 
 ===================================================
 # Legacy Material
