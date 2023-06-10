@@ -128,20 +128,22 @@ One must select the Images view in the left side window, to select a different p
 
 </details>
 
-### Modifying Existing Features
+### Modify Existing Features
 TBA
-### Adding New Features
+### Add New Features
 TBA
 
-### Modifying the Pages
+### Modify the Pages
 TBA
-### Modifying the Graphics
+### Modify the Graphics
 TBA
-### Modifying the Variables
+### Modify the Variables
 TBA
-### Building the ICL Files
+### Build the ICL Files
 TBA
-### Building DWIN_SET
+### Generate Your New DWIN_SET
+TBA
+### Flash and Validate Your New DWIN_SET
 TBA
 ### "Rolling Your Own"
 <details>
