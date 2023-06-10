@@ -1,26 +1,29 @@
 **CAUTION: THIS FILE IS OUT OF DATE.  IT IS HERE TO PRESERVE KEY USEFUL INFO UNTIL THE REPLACEMENT DOCUMENTATION (CURRENTLY IN WIP) IS READY TO POST.** - Thinkersbluff.
 
-### Translations / localization
+### Translations / localization 
 
-Internationalization support in DGUS DWIN is very cumbersome. The background images of each page has the text hardcoded. To translate and have it first-class, you would need to duplicate all the bmps, give it a separate ID, and maintain that mapping in firmware as well or make every label an icon, which is a lot of work. The development team has no capacity to maintain localizations.
+Internationalization support in DGUS DWIN is very cumbersome. 
+- The text on the background bitmaps for each screen, each button, and each icon is embedded in the bitmaps. To translate and have it first-class, you would need to duplicate all the bmps, give each version of each bitmap a separate ID, and keep track of that mapping in firmware, which is a lot of work. The volunteers in the development team have no capacity to maintain localizations that way.
 
-If you like to translate the user interface to your own language, you must fork this repository and maintain your own version of the touch screen firmware.
+If you want to translate the English-only user interface into your own language, you instead have the option of forking this repository and building maintaining your own version of the touch screen firmware.
 
-The complete workflow would look like this:
+The complete workflow could look like this:
 
 1. Fork this repository.
 2. Work on the extui branch (this is the branch for all work going forward)
-3. In your fork, follow [the steps in the images section of this file](#images--screen-images-sources) to change the current bitmaps and translate them. There are XCF files available as the source of these bitmaps, usable in Gimp, to make life easier but you can do what you want.
-4. When we change something, it is up to you to replicate those screen changes. Therefore I recommend only to update the screen backgrounds and don't use the DWIN editor for anything other than for the purpose of generating the ICL file.
-5. Translated touch screen builds are up to you to provide which would then need to be made from the same moment as we are releasing builds.
+3. In your fork, follow [the steps in the images section of this file](#images--screen-images-sources) to change the current bitmaps and translate them.
+4. Use the DWINTools ICL Tool to generate new 23_Screens.ICL, 42_Toggles.ICL and 45_Icons.ICL files.
+5. Use the DWINTools Tool to Generate the 13_Show.bin, 14_Touch.bin files
+6. Overwrite the ICL and bin files in the English-language DWIN_SET folder with your translated files.
+7. Flash your localized DWIN_SET to your system.
 
 Good luck, and if you maintain your own translated firmware, please let us know!
 
 ## Documentation for development
 
-You need [the DGUS v8.2.1.14.x software](https://github.com/CR6Community/CR-6-touchscreen/releases/download/v2.0.8.1-cr6-community-release-6.1/DGUS_Tool_V8.2.1.14.7z) for editing the touch screen.
+You need [the DGUS v8.2.1.14.x software](https://github.com/CR6Community/CR-6-touchscreen/releases/download/v2.0.8.1-cr6-community-release-6.1/DGUS_Tool_V8.2.1.14.7z) for editing the DWIN_SET touchscreen functionality.
 
-You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
+Open the DWprj.hmi file in the [`src\DWIN`](src\DWIN) folder:
 
 ![DGUS II interface](https://github.com/Thinkersbluff/CR-6-touchscreen_Thinkersbluff_Fork/blob/extui/doc/dgus2util.png)
 
@@ -138,4 +141,4 @@ In addition, [this is a nice resource](https://github.com/rubienr/MarlinDgusReso
 
 Icons from [Font Awesome](https://fontawesome.com/) and [Remix Icon](https://remixicon.com/).
 
-Font from [Google Fonts](https://fonts.google.com/specimen/B612) and customized with [FontForge](https://fontforge.org/).
+Font from [Google Fonts](https://fonts.google.com/specimen/B612) and customized with [FontForge](https://fontforge.org)
