@@ -24,11 +24,11 @@ This is the document's Table of Contents:
 - [The Refactored CR6 Community Touchscreen Firmware](#the-refactored-cr6-community-touchscreen-firmware)
   - [The Project File Structure](#the-project-file-structure)
     - [What the files are](#what-the-files-are)
-      - [One T5L Configuration (CFG) file](#one-t5l-configuration-cfg-file)
-      - [One ICon Library (ICL) file per Subfolder in DWIN\_SOURCE](#one-icon-library-icl-file-per-subfolder-in-dwin_source)
+      - [One T5L Configuration .CFG file](#one-t5l-configuration-cfg-file)
+      - [One ICon Library .ICL file per Subfolder in DWIN\_SOURCE](#one-icon-library-icl-file-per-subfolder-in-dwin_source)
       - [One DWINOS\_page\_change.bin File](#one-dwinos_page_changebin-file)
-      - [(Optionally) One Base-Font (.HZK) file](#optionally-one-base-font-hzk-file)
-      - [(Optionally) One DGUS2 OS .bin file](#optionally-one-dgus2-os-bin-file)
+      - [Optionally - One Base-Font .HZK file](#optionally---one-base-font-hzk-file)
+      - [Optionally - One DGUS2 OS .bin file](#optionally---one-dgus2-os-bin-file)
     - [Where the files are](#where-the-files-are)
   - [The DGUSTool Suite](#the-dgustool-suite)
   - [How to Modify an Existing Project](#how-to-modify-an-existing-project)
@@ -80,7 +80,7 @@ The  firmware flashed to the CR6 stock touchscreen display must be comprised of 
 The files within that folder each have a specific purpose, specific file-naming requirements and specific format requirements, as detailed in this section.
 <details>
 
-#### One T5L Configuration (CFG) file
+#### One T5L Configuration .CFG file
 **CAUTION: This file can be modified using the DGUSTools, but PLEASE NOTE: you can brick your display if you flash it with a badly formed T5L....CFG file**
 <details>
 
@@ -94,7 +94,7 @@ The files within that folder each have a specific purpose, specific file-naming 
 
 </details>
 
-#### One ICon Library (ICL) file per Subfolder in DWIN_SOURCE
+#### One ICon Library .ICL file per Subfolder in DWIN_SOURCE
 <details>
 
 - **Description**
@@ -130,9 +130,9 @@ The files within that folder each have a specific purpose, specific file-naming 
 
 </details>
 
-#### (Optionally) One Base-Font (.HZK) file
+#### Optionally - One Base-Font .HZK file
 TBA
-#### (Optionally) One DGUS2 OS .bin file
+#### Optionally - One DGUS2 OS .bin file
 TBA
 
 </details>
