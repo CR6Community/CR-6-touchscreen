@@ -53,7 +53,7 @@ It will be picked up automatically by the build process of DWIN when saving or g
 
 Next, re-generate the `23_Screen.icl` ICL file are follows:
 
-![Update ICL file](images/update-screen-icl.gif)
+![Update ICL file](Images/update-screen-icl.gif)
 
 Things worthy of note:
 
@@ -69,7 +69,7 @@ For icon ICL generation the process is the same, except that you pick the icons 
 
 DWIN uses a specific set-up of the flash space as described in the manual - as shown below.
 
-![DWIN flash space](images/flash-space.png)
+![DWIN flash space](Images/flash-space.png)
 
 Essentially what it boils down to:
 
@@ -89,7 +89,7 @@ During build a script will run to make sure no sectors have been overallocated. 
 
 In the currently - cleaned up - source code of the touch screen handling in Marlin, the events of the touch screen are handled as described below. This may change in the future. This picture says it all:
 
-![DWIN button-code correlation](images/button_type.png)
+![DWIN button-code correlation](Images/button_type.png)
 
 For buttons:
 
@@ -124,7 +124,7 @@ The touch screen configuration file "T5LCFG_272480.CFG" has its specification de
 
 Font's are currently configured like below:
 
-![Font Settings](images/font-settings.png)
+![Font Settings](Images/font-settings.png)
 
 In the same folder where you have the DWIN tool unpacked a `0_DWIN_ASC.HZK` file is placed. You need to copy that to the DWIN_SET folder, and can flash it directly.
 The kerning of the current font is not ideal (especially using numbers that are small, like "1"), so perhaps we should look for a replacement.
