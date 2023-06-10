@@ -25,7 +25,7 @@ You need [the DGUS v8.2.1.14.x software](https://github.com/CR6Community/CR-6-to
 
 Open the DWprj.hmi file in the [`src\DWIN`](src\DWIN) folder:
 
-![DGUS II interface](https://github.com/Thinkersbluff/CR-6-touchscreen_Thinkersbluff_Fork/blob/extui/doc/dgus2util.png)
+![DGUS II interface](Images/dgus2util.png)
 
 ### Build firmware archive
 
