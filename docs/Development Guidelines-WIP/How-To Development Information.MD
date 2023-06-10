@@ -157,6 +157,7 @@ You will see a screen similar to this one, when the tool has launched:
 
 </details>
 </details>
+
 ## How to Modify an Existing Project
 _**NOTE:** Describing how to create a new project from "scratch" is beyond the scope of this document. With a little experience, however, one should be able to understand how to at least port another existing DWIN display project to work with the CR6 stock display._
 <details>
