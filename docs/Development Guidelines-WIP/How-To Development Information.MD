@@ -2,7 +2,7 @@
 
 # Introduction
 ## Purpose
-The CR6Community Firmware User Interface (UI) is built and maintained using a set of Community-maintained image files and an integrated UI programming tool suite from DWIN Technologies.
+The CR6Community Firmware User Interface (UI) is built and maintained using a set of Community-maintained image files and an integrated UI programming tool suite from DWIN Technology Co., Ltd..
 
 This purpose of this document is to describe the files, the file structure, the tools and the workflows, in sufficient detail (hopefully) to enable future developers and interested 3rd parties to repair, extend and enhance the UI.
 
@@ -23,11 +23,12 @@ This is the document's Table of Contents:
   - [Document Overview](#document-overview)
 - [The Refactored CR6 Community Touchscreen Firmware](#the-refactored-cr6-community-touchscreen-firmware)
   - [The Project File Structure](#the-project-file-structure)
-    - [What the files are](#what-the-files-are)
+    - [The DWIN\_SET Folder](#the-dwin_set-folder)
+      - [The Bitmap .bmp files](#the-bitmap-bmp-files)
+      - [The binary .bin files](#the-binary-bin-files)
       - [The T5L Configuration .CFG file](#the-t5l-configuration-cfg-file)
       - [One ICon Library .ICL file per Subfolder in DWIN\_SOURCE](#one-icon-library-icl-file-per-subfolder-in-dwin_source)
-      - [One DWINOS\_page\_change.bin File](#one-dwinos_page_changebin-file)
-      - [Optionally - One Base-Font .HZK file](#optionally---one-base-font-hzk-file)
+      - [The Base-Font .HZK file](#the-base-font-hzk-file)
       - [Optionally - One DGUS2 OS .bin file](#optionally---one-dgus2-os-bin-file)
   - [The DGUSTool Suite](#the-dgustool-suite)
   - [How to Modify an Existing Project](#how-to-modify-an-existing-project)
@@ -66,29 +67,50 @@ The Refactored version was derived from version 6.1, which only runs on DGUS2 v3
 The Refactored version runs on all versions of DGUS2.
 
 ## The Project File Structure
-The DGUSTool generates a set of files which must be flashed to the stock Thin-Film Transitor (TFT) Touchscreen display, which is based on the DWIN Technologies T5L ASIC.
+The CR6Community Touchscreen Firmware repository contains more files than just those required to modify and generate the DWIN_SET folder and files.
 
-The DGUSTools impose some requirements on the project's file types and file structure. Those must be respected. In addition, the file structure of this project is designed to facilitate the author's preferred workflow for working with the DGUSTools. 
+This document is focussed exclusively on those files which are either inputs to or outputs from the process of modifying and generating the DWIN_SET folder and its contents.
 
 <details>
 
-### What the files are
-The  firmware flashed to the CR6 stock touchscreen display must be comprised of a single folder, named "DWIN_SET". 
+### The DWIN_SET Folder
 
-Each of the files in that folder each has a specific purpose, specific file-naming requirements and specific format requirements, as detailed in this section.
 <details>
+
+The firmware flashed to the CR6 stock touchscreen display must be comprised of a specific set of files, collected into a single folder. That folder must be named "DWIN_SET", and it must be placed into the root directory of a correctly partitioned and formatted SD card. 
+
+When that card is placed into the SD card slot of the stock CR6 TFT display, and power is applied to that display, the bootloader routine factory-programmed into that display will search for the DWIN_SET folder and then systematically process the files therein, each according to its filename and extension.
+
+The contents of the Refactored CR6Community Touchscreen Firmware DWIN_SET folder are as shown in this image:
+
+ ![DWIN_SET Contents](Images/DWIN_SET_contents.png)
+
+ #### The Bitmap .bmp files
+
+The bitmap files in the DWIN_SET folder are NOT there for flashing to the display.  23_Screens.ICL is actually the file that will be flashed to the display,to upload all of those screen background graphics.  The reason those .bmp files are in that folder is that the DGUSTool itself looks there for those images when it opens the DWprj.hmi file.  Those background graphics are essential for the work of positioning and sizing the control and display widgets, when designing individual screens.
+
+#### The binary .bin files
+
+The DGUSTools create and place into the DWIN_SET folder these four .bin files as part of the DWIN_SET generation process:
+1. 13TouchFile.bin
+2. 14ShowFile.bin
+3. 22_Config.bin
+4. DWINOS_page_change.bin
+
+Flashing 13TouchFile.bin programs the display with the hotspot coordinates of the touch controls on each screen.
+
+Flashing 14ShowFile.bin programs the display with the graphics to be displayed on each screen.
+
+Flashing 22_Config.bin programs the display with any initial data values pre-programmed into the the DWprj.hmi project in the DGUSTool suite.
+
+The specific purpose of the DWINOS_page_change.bin is not known to this author.
 
 #### The T5L Configuration .CFG file
 **CAUTION: This file can be modified using the DGUSTools, but PLEASE NOTE: you can brick your display if you flash it with a badly formed T5L....CFG file**
 <details>
 
-- **Description:** The T5L....CFG file is used to modify the configuration and state of the DWIN display. 
-- **Source**: 
-  - The CFG file T5LCFG_272480.CFG included in the DWIN_SET folder is already configured for running the CR6 Touchscreen Firmware on the stock CR6 TFT. There are also two T5L...CFG files included with the DGUS2...bin files, to support recalibrating displays. 
-- **File Naming Requirements**:
-  - The first three characters of the filename must be T5L
-  - The file extension must be .CFG
-  - Any other characters in the filename are optional, but may be limited to alphanumeric or specific special characters (e.g: "-", "+" or "_")
+The T5L....CFG file is used to modify the configuration and state of the DWIN display. 
+
 - **NOTE:** The CR6 Touchscreen Firmware will NOT work with the Creality stock firmware T5L....CFG file (and vice versa).  That is because one function of the T5L file is to configure the bootloader to look for the bootscreen ICL file at memory location 32 in the Creality stock display, but at memory location 23 in the CR6Community display.
 
 </details>
@@ -96,59 +118,47 @@ Each of the files in that folder each has a specific purpose, specific file-nami
 #### One ICon Library .ICL file per Subfolder in DWIN_SOURCE
 <details>
 
-- **Description**
-  - 23_Screens.icl - contains the screen background graphics.
-  - 32_LoadingBar.icl - contains the sequence of graphics for the firmware loading bar animation, which is used on the Loading screen and on the Print Progress screen.
-  - 42_Toggles.icl - contains the images used to simulate toggle button action on the applicable menus (e.g. The FAN ON & FAN OFF buttons are each made from one of these images. One replaces the other, when the button is activated)
-  - 45_Icons.icl - Similar to 42_Toggles, but simulating momentary action buttons (e.g. The Run PID button is made from one of these images.)
-  - 50_Animations.icl - contains the graphics from which the "throbber" animation is generated.
-- **Source**: These files must be generated by the author of the DWIN_SET firmware, using the DGUSTool.  There must be one .icl file for each of the subfolders in the DWIN_SOURCE folder:
+These files must be generated by the author of the DWIN_SET firmware, using the DGUSTool.  There must be one .icl file for each of the subfolders in the DWIN_SOURCE folder:
   - 23_Screens.icl
   - 32_LoadingBar.icl
   - 42_Toggles.icl
   - 45_Icons.icl
   - 50_Animations.icl
-- **File Naming Requirements**: 
-  - The first two characters of the icl filename specifies the starting memory location into which the graphics will be loaded by the bootloader routine, when flashing the display. 
-  - The .icl extension is required, to identify the file type to the bootloader routine.  
-  - The rest of the filename is intended to help users recognize what they are dealing with. 
-  - NOTE: If desired, these names can be truncated to XX.icl, where XX is the first two digits of their current name.
-- **Optional**: No.  
-  - All of the .icl files must be flashed at least once, for the UI to function correctly. They can, however, be flashed one at a time, or in arbitrary groupings, if desired.
-  - Any modifications made to the graphics in a DWIN_SOURCE subfolder requires the creation and flashing of a new ICL file for the contents of that folder.
+  
+  Flashing 23_Screens.icl uploads the screen background graphics to the display.
+
+  Flashing 32_LoadingBar.icl uploads the graphics for the firmware loading bar animation, which is used on the Loading screen and on the Print Progress screen.
+
+  Flashing 42_Toggles.icl uploads the images used to simulate toggle button action on the applicable menus (e.g. The FAN ON & FAN OFF buttons are each made from one of these images. One replaces the other, when the button is activated)
+
+  Flashing 45_Icons.icl uploads graphics similar to 42_Toggles, but simulating momentary action buttons (e.g. The Run PID button is made from one of these images.)
+
+  Flashing 50_Animations.icl uploads the graphics from which the "throbber" animation is generated.
+
   </details>
 
-#### One DWINOS_page_change.bin File
-
+#### The Base-Font .HZK file
 <details>
 
-- **Description:** The purpose of this file is not known to the author of this document.
-- **Source**: This file is automatically generated by the DGUSTool application "Generate" command.
-- **File Naming Requirements:** Do not move or rename this file
-- **Optional**: Unknown
+The font file loaded at memory block zero (0) is the base font used in all of the CR6 touchscreen firmware data display fields. 
 
-</details>
-
-#### Optionally - One Base-Font .HZK file
-<details>
-
-- **Description:** The font file loaded at memory block zero (0) is the base font used in all of the CR6 touchscreen firmware data display fields. 
-- **Source:** The font chosen for this project was obtained from Google Fonts and modified in FontForge to substitute the degrees symbol for a backward apostrophe. Using DGUSTools, the font was scaled, vertically and horizontally offset, and then packaged as 0_DWIN_ASC_New_At_v1.1.HZK.
+The font chosen for this project is a monospaced font obtained from Google Fonts and modified in FontForge to substitute the degrees symbol for a backward apostrophe. Using DGUSTools, the font has been scaled, vertically and horizontally offset, and then packaged as 0_DWIN_ASC_New_At_v1.1.HZK.
   ![Font Settings](Images/font-settings.png)
-- **File Naming Requirements:** The first character of the name must be "0" and the file extension must be HZK. The file name can be shortened to as little as 0.HZK, if desired.
-- **Optional:** The font file is particularly slow to flash. It only needs to be flashed once. 
-- **NOTE:**The display will also work with the Creality stock firmware HZK file, but some data displays may not fit into their allocated space, or may be hard to read.
+
+- **NOTES:**
+ 1. The display will also work with the Creality stock firmware HZK file, but some data displays may not fit into their allocated space, or may be hard to read.
+ 2.  The font file is particularly slow to flash. It only needs to be flashed once. 
 
 </details>
 
 #### Optionally - One DGUS2 OS .bin file
 <details>
 
-- **Description:** DGUS2 is the DWIN display operating system on which runs the DWIN_SET application. A DGUS2...bin file can be flashed to change the installed version of DGUS2. 
-- **Source:** Two DGUS2 files are included on the Refactored Firmware repo, specifically to help users who have flashed DGUS2v3.5 to a display calibrated for DGUS2v4.5 (or vice versa)
-- **Optional:** There are only two known scenarios in which one may need to flash a DGUS2...bin file to the CR6 display:
-- 1. If the display is running version 1.x of DGUS2 (which was factory-installed on some replacement displays), that OS does not kern the text displays correctly. DGUS2v3.5 fixes that.
-- 2. If the display has been flashed (by the user) with a version of DGUS2 that does not match the touchscreen calibration, then the display should be flashed with the other DGUS2...bin file provided on the repo.
+DGUS2 is the DWIN display operating system on which runs the DWIN_SET application. A DGUS2...bin file can be flashed to change the installed version of DGUS2. 
+
+Although previous versions of the CR6 DWIN_SET require that DGUS2 v3.5 be flashed to the display, that is no longer required with the Refactored DWIN_SET.
+
+Newer CR6 printers are now in fact delivered with DGUS2v4.5 or higher factory-installed and calibrated. Flashing DGUS2v3.5 to such displays would acually effectively disable the touchscreen.
 
 </details>
 </details>
