@@ -51,6 +51,8 @@ When code is ready for users to experiment with, the Source and DWIN_SET zip fil
 8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
 9. Please provide feedback in Comments or Issues, as applicable
 
+CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ THIS FAQ: https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it
+
 ## Contributing
 
 If you wish to contribute to the project, please provide your inputs by raising a new Issue or by commenting on an Open Issue on this repository, and/or by contributing to the discussion on the [CR6Community Discord #lcd-discussion channel](https://discord.gg/yDY6pb2BQS)
