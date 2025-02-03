@@ -2,17 +2,15 @@
 
 ## Do You Need This Re-Factored Version?
 
-**The June 2021 release of the CF6.1 Touchscreen firmware remains valid for use on all CR6 printers currently already running and calibrated for DGUS2 v3.5.**
-
 *If you have [a BTT SKR board with the BTT TFT](https://damsteen.nl/blog/2020/11/25/how-to-btt-skr-cr6-installation) you do not need this firmware. This firmware is only for when you use the stock Creality DWIN TFT display with the stock or BTT motherboard.*
 
-If your DWIN display is flashed with DGUS2 v4.5 or higher, THIS IS YOUR ONLY OPTION for running CF6.1 on your CR6 printer (unless you wish to recalibrate your touchscreen to work with DGUS2 v3.5...  See the README in the folder containing the DGUS2 Kernel files.)
+**Everyone else** needs this version of the CR6Community display firmware, to use their stock TFT display with version 6.1 of the CR6 Community motherboard firmware.
 
 ## What Problem Does This Solve?
 
-The original June 2021 CF6.1 DWIN_SET will ONLY run on displays using DGUS2 v3.5.  As of approximately December 2021, Creality started shipping displays flashed and calibrated with DGUS2 v4.5.  DGUS2 v4.5 and higher require a different touchscreen calibration than prior DGUS2 versions.  CF6.1 users who flashed those new displays started having one of two serious problems:   
+The original June 2021 CF6.1 DWIN_SET ONLY ran on displays using DGUS2 v3.5.  As of approximately December 2021, Creality started shipping displays flashed and calibrated with DGUS2 v4.5.  DGUS2 v4.5 and higher require a different touchscreen calibration than prior DGUS2 versions.  CF6.1 users who flashed those new displays with the original CF6.1 display firmware started having one of two serious problems:   
   1. If they flashed the Kernel Upgrade files to their displays, then the push buttons on the main menu did not respond to touch (because the touchscreen was not calibrated for DGUS2 v3.5)  
-  2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY runs on DGUS2 v3.5.
+  2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY ran on DGUS2 v3.5.
 
 That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
 
@@ -26,11 +24,11 @@ It will run on ALL versions of DGUS2, regardless of the touchscreen calibration,
 ## How Do I Find Out What DGUS2 kernel is Running on my Display?
 
 **To find out which version of DGUS2 is running on your display, "flash" your display with a micro SD card that contains ONLY an EMPTY folder named DWIN_SET. The top line on the blue flash screen will display the DGUS2 version currently installed.**
-
+As of 17 Dec 2024, we have removed the original diplay firmware files from the motherboard firmware download and replaced that with a link to this firmware.
 
 ## Downloads
 
-When code is ready for users to experiment with, the Source and DWIN_SET zip files are posted as Assets in the Releases section of this repository.
+The Source and DWIN_SET zip files are posted as Assets in the Releases section of this repository.
 
 * The Zip file with DWIN_SET in the name contains the DWIN_SET folder, README and support files for the current release. 
   Download that file from the latest Release's Assets list.
@@ -39,7 +37,7 @@ When code is ready for users to experiment with, the Source and DWIN_SET zip fil
   You do not need those files, unless you intend to try to fork and modify this version of the UI.
 
 ## Installing This Firmware to your Touchscreen
-1. Download the applicable DWIN_SET .zip file from the latest Release's Assets list
+1. Download the DWIN_SET .zip file from the latest Release's Assets list
 2. Extract all contents from that .zip file into a new blank directory
 3. Find and read ALL of the README files BEFORE attempting to flash your display (You'll be glad you did!)
 4. Figure-out which DGUS 2 is presently running on your display (as explained above)
