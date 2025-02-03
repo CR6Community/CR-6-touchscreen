@@ -13,18 +13,18 @@ The original June 2021 CF6.1 DWIN_SET ONLY ran on displays using DGUS2 v3.5.  As
   2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY ran on DGUS2 v3.5.
 
 That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
+As of 17 Dec 2024, we have removed the original diplay firmware files from the motherboard firmware download and replaced that with a link to this firmware.
 
 ## How Re-Factoring Helps
 
 This Re-Factored version of DWIN_SET was recreated from the June2021 release of the CF6.1 Touchscreen Firmware, in a different version of the DGUSTools.
-It will run on ALL versions of DGUS2, regardless of the touchscreen calibration, AS LONG AS YOU DO NOT FLASH DGUS2 KERNEL FILES TO THE DISPLAY THAT ARE INCOMPATIBLE WITH THE TOUCHSCREEN CALIBRATION. (See the README in the folder containing the DGUS2 Kernel files.)  
+It runs on ALL versions of DGUS2, regardless of the touchscreen calibration, AS LONG AS YOU DO NOT FLASH DGUS2 KERNEL FILES TO THE DISPLAY THAT ARE INCOMPATIBLE WITH THE TOUCHSCREEN CALIBRATION. (See the README in the folder containing the DGUS2 Kernel files.)  
 
 **NOTE: Text kerning does NOT work correctly on DGUS2 v1.x, so although this DWIN_SET can be used on Kickstarter CR6 machines still running DGUS2 v1.4, some data will not fit neatly into their display fields, unless you upgrade the DGUS2 with the DGUS2 v3.5 kernel upgrade file provided.**
 
 ## How Do I Find Out What DGUS2 kernel is Running on my Display?
 
-**To find out which version of DGUS2 is running on your display, "flash" your display with a micro SD card that contains ONLY an EMPTY folder named DWIN_SET. The top line on the blue flash screen will display the DGUS2 version currently installed.**
-As of 17 Dec 2024, we have removed the original diplay firmware files from the motherboard firmware download and replaced that with a link to this firmware.
+To find out which version of DGUS2 is running on your display, "flash" your display with a micro SD card that contains ONLY an EMPTY folder named DWIN_SET. The top line on the blue flash screen will display the DGUS2 version currently installed.
 
 ## Downloads
 
@@ -49,7 +49,7 @@ The Source and DWIN_SET zip files are posted as Assets in the Releases section o
 8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
 9. Please provide feedback in Comments or Issues, as applicable
 
-CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ THIS FAQ: https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it
+**CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ THIS FAQ: https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it**
 
 ## Contributing
 
