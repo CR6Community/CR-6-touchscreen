@@ -37,17 +37,17 @@ The Source and DWIN_SET zip files are posted as Assets in the Releases section o
   You do not need those files, unless you intend to try to fork and modify this version of the UI.
 
 ## Installing This Firmware to your Touchscreen
-1. Download the DWIN_SET .zip file from the latest Release's Assets list
-2. Extract all contents from that .zip file into a new blank directory
-3. Find and read ALL of the README files BEFORE attempting to flash your display (You'll be glad you did!)
-4. Figure-out which DGUS 2 is presently running on your display (as explained above)
-5. DO NOT FLASH ANY KERNEL FILES TO YOUR DISPLAY, unless:  
-  5.1 You have inadvertently "bricked" your display by flashing the DGUS2 kernel upgrade files to a display calibrated for DGUS2 v4.5+  
-  5.2 Your display is running version 1.x of DGUS2, and you want to fix the text kerning (in which case, add the DGUS2 v3.5 kernel file to your DWIN_SET.)
-6. Verify that you have satisfied all of the Pre-Requisites for flashing this firmware (Which you will know after reading the README files...)
-7. Flash your display with the DWIN_SET folder 
-8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
-9. Please provide feedback in Comments or Issues, as applicable
+  1. Download the DWIN_SET .zip file from the latest Release's Assets list
+  2. Extract all contents from that .zip file into a new blank directory
+  3. Find and read ALL of the README files BEFORE attempting to flash your display (You'll be glad you did!)
+  4. Figure-out which DGUS 2 is presently running on your display (it may help you later, to know what you started with)
+  5. DO NOT FLASH ANY KERNEL FILES TO YOUR DISPLAY, unless:  
+    5.1 You have inadvertently "bricked" your display by flashing the DGUS2 kernel upgrade files to a display calibrated for DGUS2 v4.5+  
+    5.2 Your display is running version 1.x of DGUS2, and you want to fix the text kerning (in which case, add the DGUS2 v3.5 kernel file to your DWIN_SET.)
+  6. Verify that you have satisfied all of the Pre-Requisites for flashing this firmware (Which you will know after reading the README files...)
+  7. Flash your display with the DWIN_SET folder 
+  8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
+  9. Please provide feedback in Comments or Issues, as applicable
 
 **CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ THIS FAQ: https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it**
 
