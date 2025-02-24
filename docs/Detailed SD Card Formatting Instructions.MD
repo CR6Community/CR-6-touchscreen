@@ -71,18 +71,18 @@ For touchscreen firmware:
 
 2. Use the following command, to determine the card's path:
 
-    sudo diskutil list
+	sudo diskutil list
 
 It'll list all drives attached to your computer. Look for an entry that matches your SDCard size (e.g. /dev/diskXXX)
 
 3. Unmount the SDCard (where XXX is your SD card)
 
-    sudo diskutil unmountdisk /dev/diskXXX
+	sudo diskutil unmountdisk /dev/diskXXX
 
 4. Partition the SDCard 
 
-    sudo diskutil partitionDisk /dev/diskXXX FAT32 MBD R
+	sudo diskutil partitionDisk /dev/diskXXX FAT32 MBD R
 
 5. Format the SDCard
 
-    sudo newfs_msdos -F 32 -c 8 -v micro /dev/diskXXX
+	sudo newfs_msdos -F 32 -c 8 -v micro /dev/diskXXX
