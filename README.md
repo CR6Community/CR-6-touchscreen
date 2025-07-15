@@ -49,7 +49,7 @@ The Source and DWIN_SET zip files are posted as Assets in the Releases section o
   8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
   9. Please provide feedback in Comments or Issues, as applicable
 
-**CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ THIS FAQ: https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it**
+**CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ [THIS FAQ]: (https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it}**
 
 ## Contributing
 
