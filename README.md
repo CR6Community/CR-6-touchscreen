@@ -4,7 +4,7 @@
 
 *If you have [a BTT SKR board with the BTT TFT](https://damsteen.nl/blog/2020/11/25/how-to-btt-skr-cr6-installation) you do not need this firmware.*
 
-**Everyone else** needs this version of the CR6Community display firmware, to use their stock TFT display with version 6.1 of the CR6 Community motherboard firmware.
+**Everyone else** needs this version of the CR6Community display firmware, to use their stock TFT display with version 6.1 or 6.2 of the CR6 Community motherboard firmware.
 
 ## What Problem Does This Solve?
 
