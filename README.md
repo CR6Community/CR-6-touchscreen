@@ -13,7 +13,7 @@ The original June 2021 CF6.1 DWIN_SET ONLY ran on displays using DGUS2 v3.5.  As
   2. If they did NOT flash the Kernel Upgrade files (What? Not everybody follows the Readme instructions?!?), their screens came up blank, because the June 2021 version of CF6.1 DWIN_SET ONLY ran on DGUS2 v3.5.
 
 That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
-As of 17 Dec 2024, we have removed the original diplay firmware zipfile from the release 6.1 motherboard firmware download and replaced that zipfile with a link to this firmware.
+As of 17 Dec 2024, we have removed the original display firmware zipfile from the release 6.1 motherboard firmware download and replaced that zipfile with a link to this firmware.
 
 ## How Re-Factoring Helps
 
