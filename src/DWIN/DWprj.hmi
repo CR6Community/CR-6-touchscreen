@@ -6,7 +6,7 @@ SCREENDSIZE=272X480
 SPADDRESS=5000
 ProVersion=641
 [IMG]
-00=00_Starting.bmp
+0=00_Starting.bmp
 26=26_NegativeKeyboard.bmp
 27=27_NegativeKeyboard_confirm.bmp
 28=28_E_main.bmp
@@ -39,6 +39,7 @@ ProVersion=641
 61=61_E_Autohome.bmp
 63=63_ActionRequired.bmp
 64=64_KillScreen.bmp
+65=65_E_resume_dialog.bmp
 66=66_Confirmation.bmp
 67=67_E_filebrowser.bmp
 68=68_PIDTune.bmp
