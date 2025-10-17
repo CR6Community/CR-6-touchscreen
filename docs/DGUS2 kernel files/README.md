@@ -1,4 +1,9 @@
-# NOTE: These kernel files are not required, unless you are having problems resulting from having inadvertently overwritten the DGUS2 kernel for which your display was last calibrated.
+# NOTE: These kernel files are normally not required, since the Refactored display firmware runs correctly on all versions of DGUS2.
+They are included here for two special use cases:
+1. If you are still running DGUS2 v1.4, the refactored display firmware will not parse text correctly.  The result will be some data not fitting within the boundary boxes of the data fields.   You can fix this by flashing the DGUS2v3.5 kernel to your display. BUT DO NOT flash v4.5!
+2. If you have flashed the wrong version of DGUS2 to your display, and now the touchscreen beeps but the buttons are not doing anything, check now which kernel you are running and try flashing the other one to your display instead.
+This YouTube video explains why these files were originally placed here: https://youtu.be/otaNJFLcuQ8
+We have since removed the confusing DWIN_SET.zip file from the motherboard zip files, so the file here is truly your only option.
 
 ## STEP1 - BEFORE ACTING ON ANY OF THE FOLLOWING RECOMMENDATIONS:
 1. Create an EMPTY folder at the root directory of an EMPTY micro SD card.
