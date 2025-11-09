@@ -15,6 +15,9 @@ The original June 2021 CF6.1 DWIN_SET ONLY ran on displays using DGUS2 v3.5.  As
 That issue left some new CF6.1 users "snookered" and often led to other issues as they tried to revert to stock and could not make that work either (if they had flashed the kernel upgrade files.)
 As of 17 Dec 2024, we have removed the original display firmware zipfile from the release 6.1 motherboard firmware download and replaced that zipfile with a link to this firmware.
 
+**NOTE: If your display is already showing the above symptoms, this YouTube video may help you get it back to an operational state: https://youtu.be/0xwFGiyg4Z8?si=GmPNhAfzx-sv9RV0**
+
+
 ## How Re-Factoring Helps
 
 This Re-Factored version of DWIN_SET was recreated from the June2021 release of the CF6.1 Touchscreen Firmware, in a different version of the DGUSTools.
@@ -37,6 +40,11 @@ The Source and DWIN_SET zip files are posted as Assets in the Releases section o
   You do not need those files, unless you intend to try to fork and modify this version of the UI.
 
 ## Installing This Firmware to your Touchscreen
+___________________________________________________________________________________________
+**CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, 
+PLEASE FIRST READ [THIS FAQ:](https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it)**
+__________________________________________________________________________________________
+
   1. Download the DWIN_SET .zip file from the latest Release's Assets list
   2. Extract all contents from that .zip file into a new blank directory
   3. Find and read ALL of the README files BEFORE attempting to flash your display (You'll be glad you did!)
@@ -48,8 +56,6 @@ The Source and DWIN_SET zip files are posted as Assets in the Releases section o
   7. Flash your display with the DWIN_SET folder 
   8. If anything went wrong, try the TROUBLESHOOTING.MD instructions
   9. Please provide feedback in Comments or Issues, as applicable
-
-**CAUTION: If you are using a MAC to prepare the SD card and to copy DWIN_SET to the card, PLEASE READ [THIS FAQ:](https://github.com/CR6Community/Marlin/wiki/Troubleshooting-Problems-with-Firmware-Flashing#my-screen-looks-like-this-picture-after-flashing-it)**
 
 ## Contributing
 
