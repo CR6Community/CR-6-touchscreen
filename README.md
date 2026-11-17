@@ -11,14 +11,28 @@
 
 In 2021, the CR6 community submitted PR#19588 to merge the cleaned-up CF6.1 UI and extended functionality upstream. The pull request stalled as Marlin evolved from 2.0.8.x to 2.1.x, a major update that fundamentally rewrote the extui API. Consequently, the original CF6.1 handlers and UI fell out of sync and were excluded from the Marlin 2.1.x branch.
 
-In fall 2026, the Marlin core team (led by Thinkyhead) revived PR#19588. They have rewritten the extui, dgus, and Creality handlers to comply with the current API while preserving the established CF6.1 DWIN_SET interface. The team is now asking CR6 owners to flash the build, run hardware tests, and report on stability and feature parity.
+In fall 2026, the Marlin core team (led by Thinkyhead) revived the CR6 extui project as PR#19588. They rewote the extui, dgus, and Creality handlers to comply with the current API while preserving compatibility with the ReFactored CF6.1 DWIN_SET interface. The team then asked CR6 owners to flash the build, run hardware tests, and report on stability and feature parity.
 
-This repository hosts the curated DWIN_SET firmware to facilitate those tests. If validation confirms Marlin 2.1.x fully supports the CF6.1 baseline, this release will simply mirror the official firmware on the CR6 Community GitHub. If testing surfaces issues requiring DWIN_SET adjustments, those fixes will be developed, discussed, and published here.
+Thinkersbluff engaged with that team, testing a series of adaptations, reporting issues observed, and contributing suggestions for solutions.
+Thinkersbluff also established forks of both the Marlin and DWIN_SET firmwares from that PR, to facilitate maintaining a CR6Community-specific version of the UI/extui interface, in the event that there was a desire and interest from the Community to do so.
+
+This repository hosts the curated DWIN_SET firmware Thinkersbluff used to facilitate those tests.
+
+The default branch 'bf2_creality_CR_6_SE_PR' contains the most recently released stable version of the project.
+
+Development branches are named 'New_At_...'.  One branch for each new version while it is still under development.  When a new version is ready to release, its 'New_At...' branch is merged into the default branch and a formal Release of that new version becomes the latest Release.
 
 ## Downloads
 
-All CR6 printers using the stock TFT display will need to flash the exact same DWIN_SET to their display.
-That firmware is available from the Source.zip file attached to the Latest Release on this site.
+All CR6 printers using the stock TFT display need the exact same DWIN_SET flashed to their display, regardless of which motherboard or what modifications have been made to that printer. 
+
+The DWIN_SET firmware is available from the Source.zip file attached to the Latest Release on this site.
+
+ ## Configuring this Firmware for Your Printer
+
+As with all Marlin firmware, all CR6 printer-specific configuration settings are managed through edits to the Configuration.h and Configuration_adv.h files with which the firmware.bin file is compiled.
+
+There is no need to configure the DWIN_SET firmware itself.
 
 ## Installing This Firmware to your Touchscreen
 ___________________________________________________________________________________________
