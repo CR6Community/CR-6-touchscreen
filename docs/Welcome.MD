@@ -1,9 +1,9 @@
 # Welcome!
-This is the documentation for the latest release of [the CR6Community DWIN_SET application - Re-Factored version 1.1, released 13 March 2023.](https://github.com/CR6Community/CR-6-touchscreen/releases/tag/Re-Factored_v1.1)
+This is the documentation for the latest release of [the CR6Community DWIN_SET application - Marlin2.1.x ExtUI/dgus/creality version 1.1, released ?? ??? 202?.](https://github.com/Thinkersbluff/CR-6-touchscreen_TB_2.1.x/releases)
 
 ## Application
 This DWIN_SET is compatible with:
-- the motherboard firmware of [CR6Community Firmware Release 6.1](https://github.com/CR6Community/Marlin/releases/tag/v2.0.8.1-cr6-community-release-6.1)
+- the motherboard firmware of [Marlin-bugfix-2.1.x_For_CR6](https://github.com/Thinkersbluff/Marlin-bugfix-2.1.x_For_CR6)
 - any version of DGUS2 OS
 - the 272 x 480 pixel portrait-mode DWIN TFT display delivered stock with each Creality CR6 printer
 
@@ -25,7 +25,7 @@ Some users will have flashed their touchscreens with a different version of DGUS
 - DGUS2 Kernel files are provided, with [instructions](DGUS%20Kernel%20Files.MD), to support users who wish to flash their screen back to a compatible version of DGUS2.
 
 ## Release Notes
-A brief summary of the differences between this release and the CF6.1 release is documented in [Release Notes.MD](Release%20Notes.MD)
+A brief summary of the differences between each release and the previous release is captured in the Release Notes supplied with each new release.
 
 ## Known Issues
 A brief overview of known issues with this release is documented in [Known Issues.MD](KNOWN%20ISSUES.MD)
