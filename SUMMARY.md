@@ -4,12 +4,15 @@
 * [Welcome!](docs/Welcome.MD)
 
 ## Overview
-* [Marlin 2.1.x extui/dgus/creality CR-6 Touchscreen firmware](README.md)
+* [Re-Factored CR-6 Touchscreen firmware](README.md)
 
 ## Installation Guidelines
+* [DGUS Kernel Files](docs/DGUS%20Kernel%20Files.MD)
 * [Detailed SD card formatting instructions](docs/Detailed%20SD%20Card%20Formatting%20Instructions.MD)
+* [Flashing Help](docs/Flashing%20Help.MD)
 
-## Known Issues
+## Release Notes
+* [Release Notes](docs/Release%20Notes.MD)
 * [KNOWN ISSUES](docs/KNOWN%20ISSUES.MD)
 
 ## Development Guidelines
