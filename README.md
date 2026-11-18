@@ -1,5 +1,12 @@
 # CR-6 Touchscreen firmware for Marlin 2.1.x
 
+<img
+  align="right"
+  width="300"
+  alt="CR-6 Touchscreen"
+  src="https://github.com/user-attachments/assets/890761e5-c6df-4bf3-964c-527eb123830b">
+
+
 ## Do You Need This Firmware?
 
 *If you have [a BTT SKR board with the BTT TFT](https://damsteen.nl/blog/2020/11/25/how-to-btt-skr-cr6-installation) you do not need this firmware.*
@@ -21,6 +28,7 @@ This repository hosts the curated DWIN_SET firmware Thinkersbluff used to facili
 The default branch 'bf2_creality_CR_6_SE_PR' contains the most recently released stable version of the project.
 
 Development branches are named 'New_At_...'.  One branch for each new version while it is still under development.  When a new version is ready to release, its 'New_At...' branch is merged into the default branch and a formal Release of that new version becomes the latest Release.
+e.g. The first version of this UI firmware is being developed on the branch New_At_v2.1.0.  When that version is stable and ready for release, it will be merged with the default branch and Released as "Release_v2.1.0".
 
 ## Downloads
 
