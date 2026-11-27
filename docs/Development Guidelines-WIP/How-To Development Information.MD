@@ -24,19 +24,7 @@ You can open the .dgus project file in the [`src\DWIN`](src\DWIN) folder:
 
 ![DGUS II interface](https://github.com/Thinkersbluff/CR-6-touchscreen_Thinkersbluff_Fork/blob/extui/doc/dgus2util.png)
 
-### Build firmware archive
 
-To build a firmware archive for distribution, use the `build.cmd` script. It will do a sanity check and then zip the files to the `build` folder.
-
-For development you can run the build script as follows: 
-
-```pwsh
-.\build -Deploy Q:
-```
-
-Where Q: is the path of your flash drive with the SD card.
-
-You need to have Powershell Core installed (pwsh).
 
 ### Images / screen images sources
 
@@ -78,9 +66,10 @@ Essentially what it boils down to:
 
 So with the above in mind one must take care to make sure files do not overlap. When you flash everything to the touch screen you must ensure you've deleted the old (renumbered) ICL files from your SD card, otherwise weird things will happen. Background may go missing, etc.
 
-During build a script will run to make sure no sectors have been overallocated. You can also run this script manually.
+You can run the script manually in a Powershell terminal, from the repository root, as follows:
+.\Tools\scripts\Get-DwinSectorAllocation.ps1
 
-![DWIN sector allocation check script](imaages/sector-allocation-check.png)
+![DWIN sector allocation check script](images/sector-allocation-check.png)
 
 ### How buttons are handled with code
 

@@ -1,5 +1,5 @@
-Formal Release: Re-Factored Version 1.1
-Release date: 9 March 2023
+Formal Release: ExtUI/dgus/creality Version 1.1
+Release date: ?? ??? 202?
 
 The following issues have been observed but not resolved, at this release:
 
