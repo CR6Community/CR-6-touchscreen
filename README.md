@@ -14,7 +14,7 @@
 **Everyone else** needs this version of the CR6Community display firmware, to use their stock Creality CR6 TFT display with the Marlin 2.1.x software developed under Marlin Pull Request (PR)#19588.
 
 
-## What Problem(s) Does This Firmware Solve?
+## Background
 
 In 2021, the CR6 community submitted [PR#19955](https://github.com/MarlinFirmware/Marlin/pull/19955) to merge the cleaned-up CF6.1 UI and extended functionality upstream. The pull request stalled as Marlin evolved from 2.0.8.x to 2.1.x, a major update that fundamentally rewrote the extui API. Consequently, the original CF6.1 handlers and UI fell out of sync and were excluded from the Marlin 2.1.x branch.
 
@@ -35,12 +35,15 @@ e.g. The first version of this UI firmware is being developed on the branch New_
 All CR6 printers using the stock TFT display need the exact same DWIN_SET flashed to their display, regardless of which motherboard or what modifications have been made to that printer. 
 
 The DWIN_SET firmware is available from the Source.zip file attached to the Latest Release on this site.
+A copy of the most recent release is also pushed to the original CR6Community/CR-6-touchscreen repository, which is where the comments in the Marlin Configuration.h file points users for the download.
+
+This one version works on all CR6 stock displays, regardless of the printer motherboard.
 
  ## Configuring this Firmware for Your Printer
+ 
+Flash the file T5LCFG_272480.CFG in DWIN_SET to configure the stock DWIN display for this firmware.
 
 As with all Marlin firmware, all CR6 printer-specific configuration settings are managed through edits to the Configuration.h and Configuration_adv.h files with which the firmware.bin file is compiled.
-
-There is no need to configure the DWIN_SET firmware itself.
 
 ## Installing This Firmware to your Touchscreen
 ___________________________________________________________________________________________
