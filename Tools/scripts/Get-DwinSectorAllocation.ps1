@@ -1,24 +1,21 @@
-[CmdletBinding()]
-Param(
-    [Parameter(Mandatory=$true)]
-    [string]
-    $FolderPath
-)
+$Current = Get-Item $PSScriptRoot
 
-# Parameter checking
-if (!(Test-Path $FolderPath)) {
-    Write-Error "Folder: $FolderPath does not exist"
+while ($null -ne $Current) {
+    if (Test-Path (Join-Path $Current.FullName ".\.gitignore")) {
+        $RepoRoot = $Current.FullName
+        break
+    }
+
+    $Current = $Current.Parent
+}
+
+if (-not $RepoRoot) {
+    Write-Error "Unable to locate repository root"
     Exit -1
 }
 
-$DwinSetPath = Join-Path $FolderPath "DWIN_SET"
+$DwinSetPath = Resolve-Path "$PSScriptRoot\..\..\src\DWIN\DWIN_SET"
 
-if (!(Test-Path $DwinSetPath)) {
-    Write-Warning "Assuming '$FolderPath' is the DWIN_SET folder"
-    $DwinSetPath = $FolderPath
-}
-
-$DwinSetPath = Resolve-Path $DwinSetPath
 
 Write-Host "Checking files in path $DwinSetPath"
 
