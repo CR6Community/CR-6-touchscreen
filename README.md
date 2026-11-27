@@ -1,4 +1,7 @@
 # CR-6 Touchscreen firmware for Marlin 2.1.x
+# NOTE: As of [Marlin version 2.1.3](https://github.com/MarlinFirmware/Marlin/releases/tag/2.1.3), this display firmware now works with [MarlinFirmware/Marlin](https://github.com/MarlinFirmware/Marlin), on CR6 printers!
+
+# Re-Factored CR-6 Touchscreen firmware
 
 <img
   align="right"
@@ -14,11 +17,11 @@
 **Everyone else** needs this version of the CR6Community display firmware, to use their stock Creality CR6 TFT display with the Marlin 2.1.x software developed under Marlin Pull Request (PR)#19588.
 
 
-## What Problem(s) Does This Firmware Solve?
+## Background
 
-In 2021, the CR6 community submitted PR#19588 to merge the cleaned-up CF6.1 UI and extended functionality upstream. The pull request stalled as Marlin evolved from 2.0.8.x to 2.1.x, a major update that fundamentally rewrote the extui API. Consequently, the original CF6.1 handlers and UI fell out of sync and were excluded from the Marlin 2.1.x branch.
+In 2021, the CR6 community submitted [PR#19955](https://github.com/MarlinFirmware/Marlin/pull/19955) to merge the cleaned-up CF6.1 UI and extended functionality upstream. The pull request stalled as Marlin evolved from 2.0.8.x to 2.1.x, a major update that fundamentally rewrote the extui API. Consequently, the original CF6.1 handlers and UI fell out of sync and were excluded from the Marlin 2.1.x branch.
 
-In fall 2026, the Marlin core team (led by Thinkyhead) revived the CR6 extui project as PR#19588. They rewote the extui, dgus, and Creality handlers to comply with the current API while preserving compatibility with the ReFactored CF6.1 DWIN_SET interface. The team then asked CR6 owners to flash the build, run hardware tests, and report on stability and feature parity.
+In fall 2026, the Marlin core team (led by Thinkyhead) revived the CR6 extui project as [PR#19958](https://github.com/MarlinFirmware/Marlin/pull/19958/). They rewote the extui, dgus, and Creality handlers to comply with the current API while preserving compatibility with the ReFactored CF6.1 DWIN_SET interface. The team then asked CR6 owners to flash the build, run hardware tests, and report on stability and feature parity.
 
 Thinkersbluff engaged with that team, testing a series of adaptations, reporting issues observed, and contributing suggestions for solutions.
 Thinkersbluff also established forks of both the Marlin and DWIN_SET firmwares from that PR, to facilitate maintaining a CR6Community-specific version of the UI/extui interface, in the event that there was a desire and interest from the Community to do so.
@@ -35,12 +38,15 @@ e.g. The first version of this UI firmware is being developed on the branch New_
 All CR6 printers using the stock TFT display need the exact same DWIN_SET flashed to their display, regardless of which motherboard or what modifications have been made to that printer. 
 
 The DWIN_SET firmware is available from the Source.zip file attached to the Latest Release on this site.
+A copy of the most recent release is also pushed to the original CR6Community/CR-6-touchscreen repository, which is where the comments in the Marlin Configuration.h file points users for the download.
+
+This one version works on all CR6 stock displays, regardless of the printer motherboard.
 
  ## Configuring this Firmware for Your Printer
+ 
+Flash the file T5LCFG_272480.CFG in DWIN_SET to configure the stock DWIN display for this firmware.
 
 As with all Marlin firmware, all CR6 printer-specific configuration settings are managed through edits to the Configuration.h and Configuration_adv.h files with which the firmware.bin file is compiled.
-
-There is no need to configure the DWIN_SET firmware itself.
 
 ## Installing This Firmware to your Touchscreen
 ___________________________________________________________________________________________
