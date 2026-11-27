@@ -26,27 +26,17 @@ In fall 2026, the Marlin core team (led by Thinkyhead) revived the CR6 extui pro
 Thinkersbluff engaged with that team, testing a series of adaptations, reporting issues observed, and contributing suggestions for solutions.
 Thinkersbluff also established forks of both the Marlin and DWIN_SET firmwares from that PR, to facilitate maintaining a CR6Community-specific version of the UI/extui interface, in the event that there was a desire and interest from the Community to do so.
 
-This repository hosts the curated DWIN_SET firmware Thinkersbluff used to facilitate those tests.
-
-The default branch 'bf2_creality_CR_6_SE_PR' contains the most recently released stable version of the project.
-
-Development branches are named 'New_At_...'.  One branch for each new version while it is still under development.  When a new version is ready to release, its 'New_At...' branch is merged into the default branch and a formal Release of that new version becomes the latest Release.
-e.g. The first version of this UI firmware is being developed on the branch New_At_v2.1.0.  When that version is stable and ready for release, it will be merged with the default branch and Released as "Release_v2.1.0".
+The [Thinkersbluff/CR-6-touchscreen_TB_2.1.x](https://github.com/Thinkersbluff/CR-6-touchscreen_TB_2.1.x) repository hosts the curated DWIN_SET firmware Thinkersbluff used to facilitate those tests.
+The formal release of the firmware resulting from those tests is captured into Release v2.1.0 of the CR6 Touchscreen firmware on this repository.
 
 ## Downloads
 
 All CR6 printers using the stock TFT display need the exact same DWIN_SET flashed to their display, regardless of which motherboard or what modifications have been made to that printer. 
 
-The DWIN_SET firmware is available from the Source.zip file attached to the Latest Release on this site.
-A copy of the most recent release is also pushed to the original CR6Community/CR-6-touchscreen repository, which is where the comments in the Marlin Configuration.h file points users for the download.
+The DWIN_SET firmware is available from the Source.zip file attached to the Latest Release on this site.  
+This is where the comments in the Marlin Configuration.h file point users for the download.
 
 This one version works on all CR6 stock displays, regardless of the printer motherboard.
-
- ## Configuring this Firmware for Your Printer
- 
-Flash the file T5LCFG_272480.CFG in DWIN_SET to configure the stock DWIN display for this firmware.
-
-As with all Marlin firmware, all CR6 printer-specific configuration settings are managed through edits to the Configuration.h and Configuration_adv.h files with which the firmware.bin file is compiled.
 
 ## Installing This Firmware to your Touchscreen
 ___________________________________________________________________________________________
@@ -65,7 +55,13 @@ ________________________________________________________________________________
   7. If anything went wrong, try the TROUBLESHOOTING.MD instructions
   8. Please provide feedback in Comments or Issues, as applicable
 
-## Contributing
+## Configuring this Firmware for Your Printer
+ 
+Flash the file T5LCFG_272480.CFG in DWIN_SET to configure the stock DWIN display for this firmware.
+
+As with all Marlin firmware, all CR6 printer-specific configuration settings are managed through edits to the Configuration.h and Configuration_adv.h files with which the firmware.bin file is compiled.
+
+## Contributing to this project
 
 If you wish to contribute to the project, please provide your inputs by raising a new Issue or by commenting on an Open Issue on this repository, and/or by contributing to the discussion on the [CR6Community Discord #lcd-discussion channel](https://discord.gg/yDY6pb2BQS)
 
