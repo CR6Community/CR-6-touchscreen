@@ -1,7 +1,6 @@
 # CR-6 Touchscreen firmware for Marlin 2.1.x
-# NOTE: As of [Marlin version 2.1.3](https://github.com/MarlinFirmware/Marlin/releases/tag/2.1.3), this display firmware now works with [MarlinFirmware/Marlin](https://github.com/MarlinFirmware/Marlin), on CR6 printers!
 
-# Re-Factored CR-6 Touchscreen firmware
+## NOTE: As of [Marlin version 2.1.3](https://github.com/MarlinFirmware/Marlin/releases/tag/2.1.3), this display firmware now works with [MarlinFirmware/Marlin](https://github.com/MarlinFirmware/Marlin), on CR6 printers!
 
 <img
   align="right"
